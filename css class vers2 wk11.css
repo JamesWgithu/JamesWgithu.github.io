@@ -188,3 +188,24 @@ body, html {
     border-radius: 3px;
   }
   
+  .quote-container {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  
+  .mushroom-bg {
+    position: absolute;
+    top: -120px; /* moves it above the box */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px; /* adjust as needed */
+    z-index: 0;
+    opacity: 0.8; /* optional: subtle overlay */
+    pointer-events: none; /* ensures it's not clickable */
+  }
+  
+  .quote {
+    position: relative;
+    z-index: 1;
+  }
