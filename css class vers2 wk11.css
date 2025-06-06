@@ -1,0 +1,189 @@
+/* Reset and fonts */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    @font-face 
+        font-family:syne mono;
+        src: url(SyneMono-Regular.ttf);
+        color: black;
+  }
+  
+  .stars-background {
+    background-image: url(webbackclip.png);
+    min-height: 100vh; /* ensures it fills the entire screen */
+    background-repeat: repeat;
+    background-size: contain; /* ✅ or try 'auto' for exact size */
+    background-attachment: scroll;
+    background-position: top center;
+    padding-top: 6rem;
+    padding-bottom: 4rem; /* add space for any fixed items or footer */
+  }
+  
+  .title {
+    font-family: fantasy;
+    text-align: center;
+    font-size: 3rem;
+    color: #00ffee;
+    text-shadow: 2px 2px #ff00ff;
+    margin: 1rem 0;
+  }
+  
+
+  .subtitle {
+    font-size: 2rem;                    /* Larger text */
+    font-weight: bold;
+    color: #FA00FF;                     /* Matches poster */
+    text-align: left;                   /* Aligns to the left */
+    border: 2px solid #27FF78;
+    padding: 1rem 1.5rem;
+    margin: 3rem 0 2rem 3rem;           /* Pushes it right and down */
+    background-color: black;
+    display: inline-block;             /* Shrinks width to content */
+    font-family: 'Syne mono', monospace;
+  }
+  
+  
+  .content-box {
+    font-family: 'Syne Mono', monospace;
+    font-size: 20px;
+    line-height: 30px;
+    color: black;
+    background-color: #e9fff0; /* override per color section */
+    border: 2px solid #00ffcc;
+    box-shadow: 0 0 0 4px black, 0 0 0 6px #00ffcc;
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 5rem auto;  /* ← change this to increase vertical spacing */
+    max-width: 800px;
+  }
+
+  .green {
+    background-color: #e9fff0;
+    border: 3px solid #cceedd;
+  }
+  
+  .yellow {
+    background-color: #ffff88;
+    border: 3px solid #ffdd44;
+  }
+  
+  .tan {
+    background-color: #e4d1b9;
+    border: 2px solid #cbbfa4;
+  }
+  
+  .highlight {
+    color: #ff00aa;
+    font-weight: bold;
+  }
+  
+  
+  .highlight-alt {
+    font-family: 'Chakra Petch', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    color: #ff00aa;
+  }
+
+.bold1 {
+    color: #27FF78;
+    font-weight: bolder;
+}
+  
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem; /* ⬅️ This is the space ABOVE the image */
+    padding-bottom: 11rem;
+  }
+  
+ 
+
+  .box-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .box-text {
+    flex: 1;
+  }
+  
+  .box-image img {
+    max-width: 100px;
+    height: auto;
+  }
+
+  .box-left {
+    margin-left: 3rem;
+    margin-right: auto;
+    max-width: 600px;
+  }
+  
+  .box-right {
+    margin-right: 3rem;
+    margin-left: auto;
+    max-width: 600px;
+  }
+  
+  .box-center {
+    margin: 3rem auto;
+    max-width: 800px;
+  }
+
+  .book-cover {
+    width: 220px;
+    height: auto;
+    aspect-ratio: 2 / 3;
+    background-image: url("jamesbirdbookimage.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    flex-shrink: 0;
+  }
+
+
+  .corner-video {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 360px;   
+    height: auto;
+    border-radius: 12px;
+    border: 2px solid #00ffaa;
+    box-shadow: 0 0 10px rgba(0, 255, 170, 0.4);
+    z-index: 1000;
+  }
+
+
+  .grow-container {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  
+  .mushroom-img-right {
+    position: absolute;
+    top: -150px;       /* Moves image upward */
+    right: -40px;     /* Nudges it to the right of the box */
+    width: 140px;     /* Adjust to match your layout */
+    z-index: 1;       /* Places it behind the tan box */
+  }
+  
+  .content-box.tan {
+    position: relative;
+    z-index: 2;       /* Ensures the tan box sits in front */
+  }
+
+  .green-line {
+    height: 3px;
+    background-color: #27FF78;
+    width: 60%;
+    margin: -1rem auto 2rem auto;
+    border-radius: 3px;
+  }
+  
