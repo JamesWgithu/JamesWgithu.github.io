@@ -7,6 +7,9 @@ body, html {
         font-family:syne mono;
         src: url(SyneMono-Regular.ttf);
         color: black;
+        body {
+          background-color: black;
+   
   }
   
   .stars-background {
