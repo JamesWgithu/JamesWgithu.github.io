@@ -196,10 +196,10 @@ body, html {
   
   .mushroom-overlay {
     position: absolute;
-    top: -160px;              /* Raises image slightly above the quote box */
+    top: 50px;              /* Raises image slightly above the quote box */
     left: 10%;                /* Pushes it more to the left */
     transform: translateX(0); /* Keep this neutral when using percentage positioning */
-    width: 280px;             /* Slightly smaller than before */
+    width: 500px;             /* Slightly smaller than before */
     z-index: 0;
     opacity: 0.9;
     pointer-events: none;
