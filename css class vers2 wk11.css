@@ -8,13 +8,15 @@ body, html {
         src: url(SyneMono-Regular.ttf);
         color: black;
   }
-  
+
   .stars-background {
     background-image: url(webbackclip.png);
     background-repeat: repeat;
-    background-size: auto 120px; /* controls scale without stretching */
-    background-position: center top;
+    background-size: auto; /* 👈 restores original image scale */
+    background-position: top center;
     background-attachment: scroll;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
   }
   
   
