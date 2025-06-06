@@ -8,17 +8,15 @@ body, html {
         src: url(SyneMono-Regular.ttf);
         color: black;
   }
-  
   .stars-background {
-    background-image: 
-      linear-gradient(to bottom, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-      url(webbackclip.png);
+    background-image: url(webbackclip.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: scroll;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
   }
-  
   
   
   .title {
