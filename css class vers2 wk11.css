@@ -194,16 +194,17 @@ body, html {
     margin: 0 auto;
   }
   
-  .mushroom-bg {
+  .mushroom-overlay {
     position: absolute;
-    top: -120px; /* moves it above the box */
-    left: 50%;
+    top: -80px; /* lifts it above the box */
+    left: 25%; /* shift it to the left (lower % = more left) */
     transform: translateX(-50%);
-    width: 150px; /* adjust as needed */
+    width: 180px; /* slightly larger */
     z-index: 0;
-    opacity: 0.8; /* optional: subtle overlay */
-    pointer-events: none; /* ensures it's not clickable */
+    opacity: 0.95;
+    pointer-events: none;
   }
+  
   
   .quote {
     position: relative;
