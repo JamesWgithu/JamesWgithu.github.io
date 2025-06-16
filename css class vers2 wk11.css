@@ -160,17 +160,16 @@ body, html {
     flex-shrink: 0;
   }
 
-
   .corner-video {
-    position: relative;
-    display: block;
-    margin: 3rem auto;
-    width: 80%;
-    max-width: 700px;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 360px;   
     height: auto;
     border-radius: 12px;
     border: 2px solid #00ffaa;
     box-shadow: 0 0 10px rgba(0, 255, 170, 0.4);
+    z-index: 1000;
   }
   
 
@@ -211,7 +210,7 @@ body, html {
   .mushroom-overlay {
     position: absolute;
     top: -380px;              /* Raises image slightly above the quote box */
-    left: -2%;                /* Pushes it more to the left */
+    left: 2%;                /* Pushes it more to the left */
     transform: translateX(0); /* Keep this neutral when using percentage positioning */
     width: 400px;             /* Slightly smaller than before */
     z-index: 0;
@@ -251,8 +250,8 @@ body, html {
 
 .mushroom-cream {
   position: absolute;
-  top: -320px;
-  left: -100px;
+  top: -320px;              /* Raise it higher */
+  left: -100px;             /* Push far left */
   width: 200px;
   transform: scaleX(-1) rotate(-5deg);
   z-index: 0;
@@ -263,10 +262,10 @@ body, html {
 
 @keyframes sway {
   0%, 100% {
-    transform: scaleX(-1) rotate(-5deg) translateY(0);
+    transform: scaleX(-1) rotate(-5deg);
   }
   50% {
-    transform: scaleX(-1) rotate(-5deg) translateY(-6px);
+    transform: scaleX(-1) rotate(5deg);
   }
 }
 
