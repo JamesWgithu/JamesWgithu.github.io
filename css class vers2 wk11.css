@@ -286,9 +286,7 @@ body, html {
 }
 
 .center-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20vh;         /* ⬅️ Pushes it lower on initial view */
-  padding-bottom: 8rem;     /* Adjust space beneath if needed */
+display: block;
+  margin: 20vh auto 4rem auto;  /* Top = 20% of screen height */
+  padding-bottom: 11rem;        /* Keep everything else the same */
 }
