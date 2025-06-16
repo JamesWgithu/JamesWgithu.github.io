@@ -14,17 +14,23 @@ body, html {
   font-family: 'Syne Mono', monospace;
 }
   
-  .stars-background {
-    background-image: url(webbackclip.png);
-    background-repeat: repeat;
-    background-size: 200px; /* Scale the background smaller */
-    background-position: top center;
-    background-attachment: scroll;
-    padding-top: 6rem;
-    padding-bottom: 4rem;
-    position: relative; /* Ensure this is set */
-  z-index: 0;
+.stars-background {
+  background-image: url(webbackclip.png);
+  background-repeat: repeat;
+  background-size: 200px;
+  background-position: top center;
+  background-attachment: scroll;
+  animation: twinkle 5s linear infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    filter: brightness(1);
   }
+  50% {
+    filter: brightness(1.2);
+  }
+}
   
   
 
@@ -283,3 +289,4 @@ body, html {
     transform: rotate(3deg);
   }
 }
+
