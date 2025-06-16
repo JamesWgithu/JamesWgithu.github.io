@@ -161,7 +161,6 @@ body, html {
   }
   
   .corner-video {
-    position: relative;       /* ✅ Let it scroll naturally */
     display: block;
     margin: 3rem auto;
     width: 80%;
@@ -170,9 +169,8 @@ body, html {
     border-radius: 12px;
     border: 2px solid #00ffaa;
     box-shadow: 0 0 10px rgba(0, 255, 170, 0.4);
-    z-index: 10;              /* Keep it above other elements */
+    position: relative; /* <- not fixed */
   }
-
 
   .grow-container {
     position: relative;
@@ -262,10 +260,10 @@ body, html {
 
 @keyframes sway {
   0%, 100% {
-    transform: scaleX(-1) rotate(-5deg) translateX(0);
+    transform: scaleX(-1) rotate(-5deg);
   }
   50% {
-    transform: scaleX(-1) rotate(-5deg) translateX(8px);
+    transform: scaleX(-1) rotate(5deg);
   }
 }
 
