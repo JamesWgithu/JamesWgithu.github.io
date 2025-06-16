@@ -1,16 +1,18 @@
-/* Reset and fonts */
+/* ✅ Declare font face globally */
+@font-face {
+  font-family: 'Syne Mono';
+  src: url('SyneMono-Regular.ttf');
+}
+
+/* ✅ Apply global body + html styles */
 body, html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    @font-face 
-        font-family:syne mono;
-        src: url(SyneMono-Regular.ttf);
-        color: black;
-        body {
-          background-color: black;
-   
-  }
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: black;
+  font-family: 'Syne Mono', monospace;
+}
   
   .stars-background {
     background-image: url(webbackclip.png);
@@ -20,6 +22,8 @@ body, html {
     background-attachment: scroll;
     padding-top: 6rem;
     padding-bottom: 4rem;
+    position: relative; /* Ensure this is set */
+  z-index: 0;
   }
   
   
@@ -217,18 +221,19 @@ body, html {
     content: "";
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse at center, rgba(255,255,255,0.07), transparent 60%);
+    background: radial-gradient(ellipse at center, rgba(39, 255, 120, 0.1), transparent 60%);
     pointer-events: none;
     z-index: 0;
-    filter: blur(4px);
-    animation: glowPulse 6s ease-in-out infinite;
+    filter: blur(20px);
+    animation: glowPulse 5s ease-in-out infinite;
   }
+  
 
   @keyframes glowPulse {
     0%, 100% {
-      opacity: 0.3;
+      opacity: 0.15;
     }
     50% {
-      opacity: 0.6;
+      opacity: 0.4;
     }
   }
