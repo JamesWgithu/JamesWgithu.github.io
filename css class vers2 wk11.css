@@ -162,16 +162,17 @@ body, html {
 
 
   .corner-video {
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-    width: 360px;   
+    position: relative;
+    display: block;
+    margin: 3rem auto;
+    width: 80%;
+    max-width: 700px;
     height: auto;
     border-radius: 12px;
     border: 2px solid #00ffaa;
     box-shadow: 0 0 10px rgba(0, 255, 170, 0.4);
-    z-index: 1000;
   }
+  
 
 
   .grow-container {
@@ -250,24 +251,24 @@ body, html {
 
 .mushroom-cream {
   position: absolute;
-  top: -320px;         /* Raise much higher */
-  left: -100px;        /* Move further to the left */
+  top: -320px;
+  left: -100px;
   width: 200px;
   transform: scaleX(-1) rotate(-5deg);
-  z-index: 0;          /* Behind the box */
+  z-index: 0;
   opacity: 0.95;
   pointer-events: none;
   animation: sway 5s infinite ease-in-out;
 }
 
-  @keyframes sway {
-    0%, 100% {
-      transform: scaleX(-1) rotate(-5deg);
-    }
-    50% {
-      transform: scaleX(-1) rotate(5deg);
-    }
+@keyframes sway {
+  0%, 100% {
+    transform: scaleX(-1) rotate(-5deg) translateY(0);
   }
+  50% {
+    transform: scaleX(-1) rotate(-5deg) translateY(-6px);
+  }
+}
 
 .shift-left-more {
   margin-right: auto;
