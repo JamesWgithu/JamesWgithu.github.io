@@ -236,3 +236,21 @@ body, html {
       opacity: 0.4;
     }
   }
+
+
+  
+  /* WebKit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: black; /* Background of the scroll area */
+}
+
+::-webkit-scrollbar-thumb {
+  background: url('rocketmoveinglog.png') no-repeat center;
+  background-size: contain;
+  border-radius: 8px;
+  border: 2px solid black; /* Optional: adds contrast */
+}
