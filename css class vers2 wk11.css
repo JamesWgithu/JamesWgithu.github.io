@@ -268,25 +268,21 @@ body, html {
 
 .mushroom-cream {
   position: absolute;
-  top: -140px;
-  right: -50px;
-  width: 160px;
-  z-index: 0;
-  opacity: 0.9;
+  top: -180px;              /* Raise it higher */
+  left: 0;                  /* Stick it to the left edge */
+  transform: scaleX(-1) rotate(-5deg);  /* Invert horizontally and rotate slightly */
+  width: 200px;             /* Adjust size as needed */
+  z-index: 1;
+  animation: sway 5s infinite ease-in-out;
   pointer-events: none;
 }
 
-.mushroom-sway {
-  animation: swayMotion 4s ease-in-out infinite;
-  transform-origin: bottom center;
-}
-
-@keyframes swayMotion {
+/* Optional sway animation */
+@keyframes sway {
   0%, 100% {
-    transform: rotate(0deg);
+    transform: scaleX(-1) rotate(-5deg) translateY(0);
   }
   50% {
-    transform: rotate(3deg);
+    transform: scaleX(-1) rotate(-5deg) translateY(-5px);
   }
 }
-
