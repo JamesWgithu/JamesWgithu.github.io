@@ -285,8 +285,19 @@ body, html {
   z-index: 2;
 }
 
-.center-logo {
-display: block;
-  margin: 20vh auto 4rem auto;  /* Top = 20% of screen height */
-  padding-bottom: 11rem;        /* Keep everything else the same */
+.center2 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 11rem;
+}
+
+
+.logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full screen height */
+  padding-top: 4rem;
+  box-sizing: border-box;
 }
