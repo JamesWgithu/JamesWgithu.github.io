@@ -220,11 +220,11 @@ body, html {
   .stars-background::before {
     content: "";
     position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse at center, rgba(39, 255, 120, 0.4), transparent 60%);
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(circle at center, rgba(39, 255, 120, 0.35), transparent 65%);
+    z-index: 1; /* Above background, below content */
     pointer-events: none;
-    z-index: 2;
-    filter: blur(60px);
+    filter: blur(80px);
     animation: glowPulse 3s ease-in-out infinite;
   }
 
@@ -233,12 +233,12 @@ body, html {
       opacity: 0.15;
     }
     50% {
-      opacity: 0.4;
+      opacity: 0.5;
     }
   }
 
 
-  
+
   /* WebKit browsers (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
   width: 16px;
