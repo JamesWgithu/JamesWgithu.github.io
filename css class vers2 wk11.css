@@ -221,11 +221,11 @@ body, html {
     content: "";
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse at center, rgba(39, 255, 120, 0.2), transparent 60%);
+    background: radial-gradient(ellipse at center, rgba(39, 255, 120, 0.4), transparent 60%);
     pointer-events: none;
     z-index: 2;
-    filter: blur(35px);
-    animation: glowPulse 5s ease-in-out infinite;
+    filter: blur(60px);
+    animation: glowPulse 3s ease-in-out infinite;
   }
 
   @keyframes glowPulse {
