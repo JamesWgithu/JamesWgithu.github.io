@@ -159,19 +159,19 @@ body, html {
     border: 2px solid black;
     flex-shrink: 0;
   }
-
+  
   .corner-video {
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-    width: 360px;   
+    position: relative;       /* ✅ Let it scroll naturally */
+    display: block;
+    margin: 3rem auto;
+    width: 80%;
+    max-width: 700px;
     height: auto;
     border-radius: 12px;
     border: 2px solid #00ffaa;
     box-shadow: 0 0 10px rgba(0, 255, 170, 0.4);
-    z-index: 1000;
+    z-index: 10;              /* Keep it above other elements */
   }
-  
 
 
   .grow-container {
@@ -262,16 +262,16 @@ body, html {
 
 @keyframes sway {
   0%, 100% {
-    transform: scaleX(-1) rotate(-3deg) translateX(0);
+    transform: scaleX(-1) rotate(-5deg) translateX(0);
   }
   50% {
-    transform: scaleX(-1) rotate(-3deg) translateX(10px);
+    transform: scaleX(-1) rotate(-5deg) translateX(8px);
   }
 }
 
 .shift-left-more {
   margin-right: auto;
-  margin-left: 3rem;
+  margin-left: 10rem;
 }
 
 .quote-container {
