@@ -254,3 +254,32 @@ body, html {
   border-radius: 8px;
   border: 2px solid black; /* Optional: adds contrast */
 }
+
+
+.shift-left {
+  margin-right: 1rem !important;  /* Overrides box-right's default margin */
+}
+
+.mushroom-cream {
+  position: absolute;
+  top: -140px;
+  right: -50px;
+  width: 160px;
+  z-index: 0;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.mushroom-sway {
+  animation: swayMotion 4s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+@keyframes swayMotion {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
