@@ -249,25 +249,25 @@ body, html {
 }
 
 .mushroom-cream {
-    position: absolute;
-    top: -100px;         /* Adjust for vertical alignment */
-    left: -60px;         /* Move to far left of box */
-    width: 180px;        /* Resize */
-    transform: scaleX(-1) rotate(-5deg);
-    z-index: 0;          /* Ensure it stays behind the box */
-    opacity: 0.95;
-    pointer-events: none;
-    animation: sway 5s infinite ease-in-out;
-  }
-/* Optional sway animation */
-@keyframes sway {
-  0%, 100% {
-    transform: scaleX(-1) rotate(-5deg) translateY(0);
-  }
-  50% {
-    transform: scaleX(-1) rotate(-5deg) translateY(-5px);
-  }
+  position: absolute;
+  top: -320px;         /* Raise much higher */
+  left: -100px;        /* Move further to the left */
+  width: 200px;
+  transform: scaleX(-1) rotate(-5deg);
+  z-index: 0;          /* Behind the box */
+  opacity: 0.95;
+  pointer-events: none;
+  animation: sway 5s infinite ease-in-out;
 }
+
+  @keyframes sway {
+    0%, 100% {
+      transform: scaleX(-1) rotate(-5deg);
+    }
+    50% {
+      transform: scaleX(-1) rotate(5deg);
+    }
+  }
 
 .shift-left-more {
   margin-right: auto;
