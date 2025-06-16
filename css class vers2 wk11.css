@@ -237,8 +237,8 @@ body, html {
 
 .mushroom-cream {
   position: absolute;
-  top: -320px;
-  left: -100px;
+  top: -60px;
+  left: -120px;
   width: 200px;
   transform: scaleX(-1) rotate(-5deg);
   z-index: 0;
