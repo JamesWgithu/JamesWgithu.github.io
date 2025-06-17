@@ -303,12 +303,16 @@ body, html {
   box-sizing: border-box;
 }
 
+
 .publication-note {
   font-size: 14px;
   color: #27FF78;
   text-align: center;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: -0.75rem;  /* Pull it closer to the line */
+  margin-top: 0;            /* Remove extra space above */
   font-family: 'Syne Mono', monospace;
   opacity: 0.75;
+  display: inline-block;
+  position: relative;
+  top: -1.5rem;              /* Adjust this value to move the text upward */
 }
