@@ -275,9 +275,8 @@ New tools and perspectives may offer <span class="bold1">frontiers to exploit â€
 </div>
 
 
-
 <script>
-  // Cursor trail effect
+  // ðŸŸ¢ Cursor trail effect
   document.addEventListener('mousemove', e => {
     const dot = document.createElement('div');
     dot.classList.add('cursor-dot');
@@ -286,17 +285,28 @@ New tools and perspectives may offer <span class="bold1">frontiers to exploit â€
     document.body.appendChild(dot);
     setTimeout(() => dot.remove(), 500);
   });
-  
-  // Idle glow detection
-  let idleTimer;
-  document.onmousemove = () => {
-    clearTimeout(idleTimer);
-    document.body.classList.remove('idle');
-    idleTimer = setTimeout(() => {
-      document.body.classList.add('idle');
-    }, 3000); // 3 seconds of idle triggers glow
-  };
-  </script>
+
+  // âœ¨ Add glow only when hovering interactive elements
+  document.addEventListener('mouseover', function (e) {
+    if (
+      e.target.tagName === 'A' ||
+      e.target.tagName === 'BUTTON' ||
+      e.target.classList.contains('hover-glow')
+    ) {
+      document.body.classList.add('hovering');
+    }
+  });
+
+  document.addEventListener('mouseout', function (e) {
+    if (
+      e.target.tagName === 'A' ||
+      e.target.tagName === 'BUTTON' ||
+      e.target.classList.contains('hover-glow')
+    ) {
+      document.body.classList.remove('hovering');
+    }
+  });
+</script>
 
 
 
