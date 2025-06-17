@@ -19,7 +19,7 @@ body, html {
   background-repeat: repeat;
   background-size: 200px;
   background-position: top center;
-  background-attachment: scroll;
+  background-attachment: fixed;
   animation: twinkle 5s linear infinite;
 }
 
@@ -299,6 +299,6 @@ body, html {
   justify-content: center;
   align-items: center;
   height: 100vh; /* Full screen height */
-  padding-top: 4rem;
+  padding-top: 10vh;
   box-sizing: border-box;
 }
