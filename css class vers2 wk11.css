@@ -322,40 +322,6 @@ body, html {
 }
 
 
-.footer-graphic {
-  background-image: url('treelich123.svg');
-  background-repeat: no-repeat;
-  background-position: bottom left;
-  background-size: auto 200vh; /* Large image height */
-  width: 100%;
-  height: 200vh;               /* Match the image height */
-  margin: 0;
-  padding: 0;
-  position: relative;
-  z-index: 1;
-  background-color: transparent;
-  display: flex;
-  align-items: flex-end;
-}
-
-
-.footer-graphic::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  background: linear-gradient(to bottom, transparent, black);
-  z-index: 2;
-}
-
-@media (max-width: 768px) {
-  .footer-graphic {
-    background-size: contain;
-    background-position: bottom left;
-  }
-}
 .credits {
   text-align: center;
   padding: 2rem 1rem;
@@ -369,3 +335,24 @@ body, html {
 }
 
 
+.footer-graphic {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+}
+
+.footer-graphic img {
+  display: block;
+  width: auto;
+  height: 200vh; /* ✅ Uses full viewport height */
+  margin: 0;
+  padding: 0;
+  object-fit: contain;
+  object-position: bottom left;
+}
