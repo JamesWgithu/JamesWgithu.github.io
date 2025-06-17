@@ -377,7 +377,7 @@ body, html {
 
 /* ✋ Custom cursor (default) */
 body {
-  cursor: url('handclick1.svg') 12 0, auto;
+  cursor: url('handclick12.png') 8 4, auto;
 }
 
 /* 🟢 Dot trail effect */
@@ -402,7 +402,7 @@ body {
 
 /* 🟢 Glow effect when idle */
 body.idle {
-  cursor: url('handclick1.svg') 12 0, auto;
+  cursor: url('handclick12.png') 8 4, auto;
   animation: pulseCursor 1.5s ease-in-out infinite;
 }
 
