@@ -374,3 +374,43 @@ body, html {
   display: block;
   margin: 0 auto;
 }
+
+/* ✋ Custom cursor (default) */
+body {
+  cursor: url('handclick1.svg') 12 0, auto;
+}
+
+/* 🟢 Dot trail effect */
+.cursor-dot {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #27FF78;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.6;
+  animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+/* 🟢 Glow effect when idle */
+body.idle {
+  cursor: url('handclick1.svg') 12 0, auto;
+  animation: pulseCursor 1.5s ease-in-out infinite;
+}
+
+@keyframes pulseCursor {
+  0%, 100% {
+    filter: drop-shadow(0 0 2px #27FF78);
+  }
+  50% {
+    filter: drop-shadow(0 0 10px #27FF78);
+  }
+}

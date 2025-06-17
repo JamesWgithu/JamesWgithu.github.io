@@ -256,5 +256,30 @@ New tools and perspectives may offer <span class="bold1">frontiers to exploit â€
 </div>
 
 
+
+<script>
+  // Cursor trail effect
+  document.addEventListener('mousemove', e => {
+    const dot = document.createElement('div');
+    dot.classList.add('cursor-dot');
+    dot.style.left = `${e.clientX}px`;
+    dot.style.top = `${e.clientY}px`;
+    document.body.appendChild(dot);
+    setTimeout(() => dot.remove(), 500);
+  });
+  
+  // Idle glow detection
+  let idleTimer;
+  document.onmousemove = () => {
+    clearTimeout(idleTimer);
+    document.body.classList.remove('idle');
+    idleTimer = setTimeout(() => {
+      document.body.classList.add('idle');
+    }, 3000); // 3 seconds of idle triggers glow
+  };
+  </script>
+
+
+
 </body>
 </html>
