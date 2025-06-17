@@ -302,3 +302,13 @@ body, html {
   padding-top: 10vh;
   box-sizing: border-box;
 }
+
+.publication-note {
+  font-size: 14px;
+  color: #27FF78;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Syne Mono', monospace;
+  opacity: 0.75;
+}
