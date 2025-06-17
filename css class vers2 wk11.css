@@ -270,7 +270,7 @@ body, html {
 
 .mushroom-cream {
   position: absolute;
-  top: -500px;      /* ⬅️ Raise it up */
+  top: -400px;      /* ⬅️ Raise it up */
   left: -120px;     /* ⬅️ Move it left */
   width: 280px;
   transform: scaleX(-1) rotate(-2deg);
