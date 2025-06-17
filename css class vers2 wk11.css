@@ -377,7 +377,7 @@ body, html {
 
 /* ✋ Custom cursor (default) */
 body {
-  cursor: url('handclick12.png') 8 4, auto;
+  cursor: url('handclick12.png'), auto;
 }
 
 /* 🟢 Dot trail effect */
