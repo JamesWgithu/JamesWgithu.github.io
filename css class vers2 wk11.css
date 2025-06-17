@@ -304,15 +304,19 @@ body, html {
 }
 
 
+.publication-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -1.5rem; /* Move the whole thing up */
+  margin-bottom: -1rem;
+}
+
 .publication-note {
   font-size: 14px;
   color: #27FF78;
-  text-align: center;
-  margin-bottom: -0.75rem;  /* Pull it closer to the line */
-  margin-top: 0;            /* Remove extra space above */
   font-family: 'Syne Mono', monospace;
   opacity: 0.75;
-  display: inline-block;
-  position: relative;
-  top: -1.5rem;              /* Adjust this value to move the text upward */
+  margin: 0;
 }
