@@ -326,11 +326,11 @@ body, html {
 .footer-graphic {
   background-image: url('treelich123.svg'); /* ← Your new SVG background */
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 110% auto;
   background-position: bottom left;
   background-color: transparent; /* Ensures stars background shows */
-  width: calc(100% - 320px); /* Leaves space for the corner video */
-  height: 60vh; /* Adjust height as needed */
+  width: calc 100%; /* Leaves space for the corner video */
+  height: 150vh; /* Adjust height as needed */
   margin-top: 6rem;
   padding-top: 4rem;
   position: relative;
