@@ -324,23 +324,17 @@ body, html {
 
 
 .footer-graphic {
-  width: calc(100% - 340px); /* subtract width of corner-video + margin */
-  margin-left: 0;
-  position: relative;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  z-index: 1;
-  background-color: transparent;  /* ⬅️ Let stars show through */
-  padding-top: 4rem;
+  background-image: url('treelich123.svg'); /* ← Your new SVG background */
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom left;
+  background-color: transparent; /* Ensures stars background shows */
+  width: calc(100% - 320px); /* Leaves space for the corner video */
+  height: 60vh; /* Adjust height as needed */
   margin-top: 6rem;
-}
-
-.footer-graphic img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  background: transparent; /* ensures no black box behind */
+  padding-top: 4rem;
+  position: relative;
+  z-index: 2;
 }
 
 .credits {
