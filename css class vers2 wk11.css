@@ -356,3 +356,21 @@ body, html {
   object-fit: contain;
   object-position: bottom left;
 }
+
+
+.footer-end-illustration {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black; /* Keep the background consistent */
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.footer-end-illustration img {
+  max-width: 90%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
