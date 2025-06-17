@@ -331,6 +331,9 @@ body, html {
   justify-content: flex-start;
   align-items: flex-end;
   z-index: 1;
+  background-color: transparent;  /* ⬅️ Let stars show through */
+  padding-top: 4rem;
+  margin-top: 6rem;
 }
 
 .footer-graphic img {
@@ -351,6 +354,5 @@ body, html {
   padding-bottom: 3rem; /* extra room so it's not clipped at bottom */
   opacity: 0.8;
 }
-
 
 
