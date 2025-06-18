@@ -587,6 +587,6 @@ body.hovering {
 
 .mushroom-wrapper {
   position: relative;
-  transform: rotate(-40deg); /* or 160deg, adjust as needed */
+  transform: rotate(-20deg); /* or 160deg, adjust as needed */
   transform-origin: bottom left; /* pivots like a plant growing out */
 }
