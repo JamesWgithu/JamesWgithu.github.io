@@ -690,24 +690,27 @@ footer.credits p:first-of-type {
 
 /* 🌿 Root Images Positioned Over Whole Screen */
 .root-img {
-  position: absolute;
-  width: 25vw;
-  height: auto;
-  opacity: 0.8;
-  pointer-events: none;
-}
+    position: absolute;
+    height: auto;
+    opacity: 0.8;
+    pointer-events: none;
+    z-index: 1;
+    border: 1px solid limegreen;
+  }
+
 
 /* Position each root image manually – fine-tune if needed */
-#root1 { top: 0; left: 0; }
-#root2 { top: 0; left: 25vw; }
-#root3 { top: 0; left: 50vw; }
-#root4 { top: 0; left: 75vw; }
-#root5 { top: 50vh; left: 0; }
-#root6 { top: 50vh; left: 25vw; }
-#root7 { top: 50vh; left: 50vw; }
-#root8 { top: 50vh; left: 75vw; }
-#root9 { top: 25vh; left: 12.5vw; }
-#root10 { top: 25vh; left: 62.5vw; }
+/* 🌿 Root Images Positioned Around Screen */
+#root1  { top: 0; left: 0; width: 30vw; }
+#root2  { top: 0; right: 0; width: 30vw; }
+#root3  { top: 20vh; left: 20vw; width: 25vw; }
+#root4  { top: 40vh; right: 10vw; width: 25vw; }
+#root5  { bottom: 0; left: 0; width: 30vw; }
+#root6  { bottom: 0; right: 0; width: 30vw; }
+#root7  { top: 50vh; left: 5vw; width: 20vw; }
+#root8  { top: 10vh; right: 30vw; width: 20vw; }
+#root9  { bottom: 20vh; left: 35vw; width: 25vw; }
+#root10 { top: 35vh; left: 60vw; width: 20vw; }
 
 /* 🎬 Intro Button Styling */
 #enter-button {
