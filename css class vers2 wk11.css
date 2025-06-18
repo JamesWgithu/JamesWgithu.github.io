@@ -483,3 +483,38 @@ body.hovering {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-6px); }
 }
+
+.mushroom3 {
+  position: absolute;
+  top: -115px;  /* adjust as needed */
+  left: -65px;  /* adjust as needed */
+  width: 130px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.stem3 {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  animation: stemSway 4s ease-in-out infinite;
+}
+
+.cap3 {
+  position: absolute;
+  top: -60px;  /* positions cap on tip */
+  left: 10px;  /* nudges cap to center */
+  width: 100%;
+  z-index: 2;
+  animation: capBob 3s ease-in-out infinite;
+}
+
+@keyframes stemSway {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(2deg); }
+}
+
+@keyframes capBob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
