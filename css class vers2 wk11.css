@@ -14,6 +14,7 @@ body, html {
   font-family: 'Syne Mono', monospace;
   font-size: 18px;
   line-height: 1.8;
+  overflow-x: hidden; /* ✅ Prevent horizontal scrolling */
 }
 
 .stars-background {
@@ -450,12 +451,12 @@ body.hovering {
   margin: 0 auto;
   padding: 2rem;
 }
-
 .mushroom-cluster-fixed {
   position: relative;
-  width: 500px;
-  height: 400px;
+  width: 400px; /* Match original PNG width */
+  height: 300px; /* Adjusted to cluster height */
   margin: 0 auto;
+  overflow: visible;
 }
 
 .mushroom-cluster-fixed .mushroom {
@@ -465,6 +466,24 @@ body.hovering {
   align-items: center;
 }
 
+/* Manually position each mushroom in the cluster */
+.mushroom-cluster-fixed .mushroom:nth-child(1) {
+  left: 10px;
+  bottom: 0;
+}
+.mushroom-cluster-fixed .mushroom:nth-child(2) {
+  left: 90px;
+  bottom: 0;
+}
+.mushroom-cluster-fixed .mushroom:nth-child(3) {
+  left: 170px;
+  bottom: 0;
+}
+.mushroom-cluster-fixed .mushroom:nth-child(4) {
+  left: 250px;
+  bottom: 0;
+}
+
 .mushroom-cluster-fixed .stem {
   transform-origin: bottom center;
   animation: stemSway 4s ease-in-out infinite;
@@ -472,7 +491,7 @@ body.hovering {
 
 .mushroom-cluster-fixed .cap {
   animation: capBob 3s ease-in-out infinite;
-  margin-top: -40px;
+  margin-top: -30px; /* Move caps down onto stems */
 }
 
 @keyframes stemSway {
@@ -482,15 +501,16 @@ body.hovering {
 
 @keyframes capBob {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+  50% { transform: translateY(-6px); }
 }
 
+/* Staggered delays */
 .mushroom-cluster-fixed .mushroom:nth-child(1) .stem { animation-delay: 0s; }
-.mushroom-cluster-fixed .mushroom:nth-child(2) .stem { animation-delay: 0.4s; }
-.mushroom-cluster-fixed .mushroom:nth-child(3) .stem { animation-delay: 0.8s; }
-.mushroom-cluster-fixed .mushroom:nth-child(4) .stem { animation-delay: 1.2s; }
+.mushroom-cluster-fixed .mushroom:nth-child(2) .stem { animation-delay: 0.3s; }
+.mushroom-cluster-fixed .mushroom:nth-child(3) .stem { animation-delay: 0.6s; }
+.mushroom-cluster-fixed .mushroom:nth-child(4) .stem { animation-delay: 0.9s; }
 
-.mushroom-cluster-fixed .mushroom:nth-child(1) .cap { animation-delay: 0.2s; }
-.mushroom-cluster-fixed .mushroom:nth-child(2) .cap { animation-delay: 0.6s; }
-.mushroom-cluster-fixed .mushroom:nth-child(3) .cap { animation-delay: 1s; }
-.mushroom-cluster-fixed .mushroom:nth-child(4) .cap { animation-delay: 1.4s; }
+.mushroom-cluster-fixed .mushroom:nth-child(1) .cap { animation-delay: 0.1s; }
+.mushroom-cluster-fixed .mushroom:nth-child(2) .cap { animation-delay: 0.4s; }
+.mushroom-cluster-fixed .mushroom:nth-child(3) .cap { animation-delay: 0.7s; }
+.mushroom-cluster-fixed .mushroom:nth-child(4) .cap { animation-delay: 1s; }
