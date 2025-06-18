@@ -452,12 +452,12 @@ body.hovering {
   padding: 2rem;
 }
 
-
 .mushroom-cluster-fixed {
   position: relative;
-  width: 320px;
-  height: 280px;
+  width: 180px;  /* much smaller container */
+  height: 250px;
   margin: 4rem auto;
+  z-index: 0;
 }
 
 .mushroom-cluster-fixed .mushroom {
@@ -474,42 +474,43 @@ body.hovering {
 
 .mushroom-cluster-fixed .cap {
   animation: capBob 3s ease-in-out infinite;
-  margin-top: -30px;
+  margin-top: -32px;  /* bring cap closer to stem */
+  transform-origin: center bottom;
 }
 
-/* Accurate position + scale match */
+/* ⚙️ Manually tuned positioning based on original cluster image */
 .mushroom-cluster-fixed .mushroom:nth-child(1) {
-  top: 90px;
-  left: 10px;
-  transform: scale(0.75);
+  top: 80px;
+  left: 0;
+  transform: scale(0.6);
 }
 .mushroom-cluster-fixed .mushroom:nth-child(2) {
   top: 60px;
-  left: 80px;
-  transform: scale(0.9);
+  left: 50px;
+  transform: scale(0.65);
 }
 .mushroom-cluster-fixed .mushroom:nth-child(3) {
   top: 20px;
-  left: 150px;
-  transform: scale(1);
+  left: 90px;
+  transform: scale(0.75);
 }
 .mushroom-cluster-fixed .mushroom:nth-child(4) {
-  top: 100px;
-  left: 220px;
-  transform: scale(0.8);
+  top: 90px;
+  left: 120px;
+  transform: scale(0.55);
 }
 
-/* Animations */
+/* 🌬️ Gentle staggered animations */
 @keyframes stemSway {
   0%, 100% { transform: rotate(0deg); }
   50% { transform: rotate(2deg); }
 }
+
 @keyframes capBob {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-6px); }
 }
 
-/* Staggering */
 .mushroom-cluster-fixed .mushroom:nth-child(1) .stem { animation-delay: 0s; }
 .mushroom-cluster-fixed .mushroom:nth-child(2) .stem { animation-delay: 0.2s; }
 .mushroom-cluster-fixed .mushroom:nth-child(3) .stem { animation-delay: 0.4s; }
