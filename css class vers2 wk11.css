@@ -518,3 +518,28 @@ body.hovering {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-4px); }
 }
+
+.mushroom3 {
+  position: absolute;
+  bottom: 10px;   /* Anchors near the bottom of the box */
+  left: -70px;    /* Grows from left of the box */
+  width: 130px;
+  z-index: 0;     /* Behind the content */
+  pointer-events: none;
+}
+
+.stem3 {
+  width: 100%;
+  position: relative;
+  z-index: 0;   /* Ensure stem stays behind text box */
+  animation: stemSway 4s ease-in-out infinite;
+}
+
+.cap3 {
+  position: absolute;
+  top: -70px;   /* Move upward to sit on tip */
+  left: 5px;    /* Center horizontally on stem */
+  width: 110%;
+  z-index: 1;
+  animation: capBob 3s ease-in-out infinite;
+}
