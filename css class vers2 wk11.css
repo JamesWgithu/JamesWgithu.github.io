@@ -585,6 +585,10 @@ body.hovering {
   animation: capBob 3s ease-in-out infinite;
 }
 
+.cap1 { animation-delay: 0s; }
+.cap2 { animation-delay: 0.3s; }
+.cap3 { animation-delay: 0.6s; }
+.cap4 { animation-delay: 0.9s; }
 
 .mushroom-wrapper {
   position: absolute;
