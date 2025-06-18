@@ -598,3 +598,24 @@ body.hovering {
   transform-origin: bottom center;
   z-index: 1;
 }
+
+footer.credits {
+  font-size: 1.2rem; /* ⬅️ Increase size */
+  color: #00ff99; /* Brighter neon green for footer */
+  text-align: center;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Syne Mono', monospace; /* Ensures type matches rest of site */
+  padding: 0 20px;
+}
+
+footer.credits p {
+  margin-bottom: 1.2rem;
+}
+
+footer.credits strong {
+  color: #00ffd5; /* Optional for emphasis */
+}
