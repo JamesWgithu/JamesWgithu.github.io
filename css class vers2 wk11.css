@@ -642,12 +642,12 @@ footer.credits p:first-of-type {
   display: flex;
   justify-content: center;
   margin: 50px 0 20px;
+  height: auto;
+  width: 80%;
 }
 
-.footer-end-illustration img {
-  max-width: 30%;
-  height: auto;
-}
+
+
 
 /* 📱 Responsive adjustments for footer text */
 @media (max-width: 600px) {
