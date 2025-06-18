@@ -462,7 +462,7 @@ body.hovering {
   position: absolute;
   bottom: 280px;   /* Keep your current value */
   left: 250px;     /* Keep your current value */
-  width: 130px;
+  width: 110px;
   z-index: 1;      /* Puts it behind .textbox3 (z-index: 2) */
   pointer-events: none;
 }
@@ -524,7 +524,7 @@ body.hovering {
 
 .cap2 {
   position: absolute;
-  top: -32px;
+  top: -28px;
   left: -32px;
   width: 120%;
   z-index: 0;
@@ -551,7 +551,7 @@ body.hovering {
 
 .cap4 {
   position: absolute;
-  top: -35px;
+  top: -28px;
   left: 10px;
   width: 120%;
   z-index: 0;
@@ -579,7 +579,7 @@ body.hovering {
 .cap1 {
   position: absolute;
   top: -35px;
-  left: 32px;
+  left: 20px;
   width: 120%;
   z-index: 0;
   animation: capBob 3s ease-in-out infinite;
