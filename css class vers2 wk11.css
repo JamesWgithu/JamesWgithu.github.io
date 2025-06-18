@@ -155,22 +155,26 @@ body, html {
   text-align: left;
 }
 
-@keyframes slideInLeft {
-  from { transform: translateX(-30px); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
+/* Start off hidden */
+.box-left,
+.box-right {
+  opacity: 0;
+  transition: all 0.8s ease-out;
 }
 
-@keyframes slideInRight {
-  from { transform: translateX(30px); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
-}
-
+/* Slide in from left or right */
 .box-left {
-  animation: slideInLeft 0.8s ease;
+  transform: translateX(-100px);
 }
 
 .box-right {
-  animation: slideInRight 0.8s ease;
+  transform: translateX(100px);
+}
+
+/* When visible (triggered by JS) */
+.box-visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .book-cover {
