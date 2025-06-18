@@ -490,7 +490,7 @@ body.hovering {
   bottom: 280px;   /* Anchors near the bottom of the box */
   left: -70px;    /* Grows from left of the box */
   width: 130px;
-  z-index: 0;     /* Behind the content */
+  z-index: -1;     /* Behind the content */
   pointer-events: none;
 }
 
