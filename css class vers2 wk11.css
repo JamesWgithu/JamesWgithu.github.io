@@ -451,6 +451,7 @@ body.hovering {
   margin: 0 auto;
   padding: 2rem;
 }
+
 .mushroom-cluster-fixed {
   position: relative;
   width: 125px; /* Match the width of the original PNG */
@@ -510,7 +511,7 @@ body.hovering {
 
 /* Cap placement per stem */
 .mushroom-cluster-fixed .mushroom:nth-child(1) .cap {
-  margin-top: -44px;
+  margin-top: 44px;
   margin-left: 0px;
 }
 .mushroom-cluster-fixed .mushroom:nth-child(2) .cap {
