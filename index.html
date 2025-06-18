@@ -9,37 +9,40 @@
 <body>
 
 
-  <div id="intro-screen">
-    <div class="intro-message">
-      <p>🔊 This website includes video, sound, and interactive media.<br>
-      🖥️ Best experienced with headphones and on desktop.</p>
-      <button id="continue-button">Click to Continue</button>
-    </div>
+  <!-- 🔒 ENTRY SCREEN HTML WITH ROOTS -->
+<div id="entry-screen">
+  <div class="entry-roots">
+    <img src="root1.png" class="entry-root root1">
+    <img src="root2.png" class="entry-root root2">
+    <img src="root3.png" class="entry-root root3">
+    <img src="root4.png" class="entry-root root4">
+    <img src="root5.png" class="entry-root root5">
+    <img src="root6.png" class="entry-root root6">
+    <img src="root7.png" class="entry-root root7">
+    <img src="root8.png" class="entry-root root8">
+    <img src="root9.png" class="entry-root root9">
+    <img src="root10.png" class="entry-root root10">
   </div>
+  <div class="entry-overlay">
+    <p>This site uses audio and animation.<br><br>Click to continue.</p>
+    <button id="enter-button">Enter</button>
+  </div>
+</div>
 
-  <script>
-    document.body.style.overflow = 'hidden'; // prevent scroll while locked
-  
-    document.getElementById('continue-button').addEventListener('click', () => {
-      const intro = document.getElementById('intro-screen');
-      intro.classList.add('fade-out');
-      setTimeout(() => {
-        intro.remove();
-        document.body.style.overflow = ''; // allow scroll again
-  
-        // Show + start corner video manually
-        const video = document.querySelector('.corner-video');
-        if (video) {
-          video.style.display = 'block';
-          video.play().catch(e => console.log("Autoplay blocked:", e));
-        }
-      }, 1000); // match fade time
+<script>
+  document.getElementById('enter-button').addEventListener('click', () => {
+    const roots = document.querySelectorAll('.entry-root');
+    roots.forEach(root => {
+      root.classList.add('exit');
     });
-  
-    // 🔒 Optional: Hide video by default in CSS
-    const video = document.querySelector('.corner-video');
-    if (video) video.style.display = 'none';
-  </script>
+
+    // Hide entry screen after animation
+    setTimeout(() => {
+      document.getElementById('entry-screen').style.display = 'none';
+    }, 2000); // matches transition duration
+  });
+</script>
+
 
 
   <video class="corner-video" autoplay muted loop playsinline controls>

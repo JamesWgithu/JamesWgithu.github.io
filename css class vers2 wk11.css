@@ -673,51 +673,78 @@ footer.credits p:first-of-type {
   letter-spacing: 0.5px;
 }
 
-
-
-#intro-screen {
+/* 🔒 ENTRY SCREEN ROOT ANIMATION */
+#entry-screen {
   position: fixed;
-  top: 0; left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 99999;
-  background: radial-gradient(circle, #121212, #050505);
-  color: #e0ffe6;
-  font-family: 'Syne Mono', monospace;
+  inset: 0;
+  background: black;
+  z-index: 9999;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  text-align: center;
-  padding: 2rem;
-  transition: opacity 1s ease;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.intro-message p {
-  font-size: 1.3rem;
-  max-width: 600px;
-  margin-bottom: 2rem;
-  line-height: 1.6;
-}
-
-#continue-button {
-  background: #a8ffdd;
-  color: #000;
-  border: none;
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
-  border-radius: 10px;
-  cursor: pointer;
-  box-shadow: 0 0 10px #88ffcc;
-  transition: background 0.3s ease, transform 0.3s ease;
-}
-
-#continue-button:hover {
-  background: #88ffcc;
-  transform: scale(1.05);
-}
-
-#intro-screen.fade-out {
-  opacity: 0;
+.entry-roots {
+  position: absolute;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
+  overflow: hidden;
+}
+
+.entry-root {
+  position: absolute;
+  max-width: 300px;
+  opacity: 0.85;
+  transition: transform 2s ease, opacity 2s ease;
+}
+
+/* 🌿 Position each root manually or via percentage (mockup) */
+.root1 { top: 5%; left: 5%; transform: rotate(0deg); }
+.root2 { top: 10%; right: 10%; transform: rotate(30deg); }
+.root3 { bottom: 15%; left: 20%; transform: rotate(-20deg); }
+.root4 { bottom: 10%; right: 20%; transform: rotate(10deg); }
+.root5 { top: 25%; left: 40%; transform: rotate(-10deg); }
+.root6 { top: 60%; right: 5%; transform: rotate(15deg); }
+.root7 { top: 40%; left: 60%; transform: rotate(-5deg); }
+.root8 { bottom: 5%; left: 50%; transform: rotate(25deg); }
+.root9 { top: 50%; right: 30%; transform: rotate(-15deg); }
+.root10 { bottom: 20%; right: 40%; transform: rotate(10deg); }
+
+/* 🧩 Entry Text */
+.entry-overlay {
+  z-index: 10;
+  color: #00ff99;
+  text-align: center;
+  font-family: 'Syne Mono', monospace;
+  font-size: 1.3rem;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid #00ff99;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #00ff99;
+}
+
+#enter-button {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  background: transparent;
+  border: 2px solid #00ff99;
+  color: #00ff99;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  font-family: 'Syne Mono', monospace;
+  transition: all 0.3s ease;
+}
+
+#enter-button:hover {
+  background: #00ff99;
+  color: black;
+}
+
+/* 🚪 Exit animation */
+.entry-root.exit {
+  transform: scale(3) translateY(-200%) rotate(360deg);
+  opacity: 0;
 }
