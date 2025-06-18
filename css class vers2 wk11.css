@@ -12,6 +12,8 @@ body, html {
   background-color: black;
   color: black;
   font-family: 'Syne Mono', monospace;
+  font-size: 18px;
+  line-height: 1.8;
 }
 
 .stars-background {
@@ -68,6 +70,12 @@ body, html {
   max-width: 800px;
   position: relative;
   z-index: 2;
+}
+
+.content-box-Paracont {
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.4px;
+  line-height: 1.7;
 }
 
 .green {
@@ -235,17 +243,6 @@ body, html {
   margin-left: 10rem;
 }
 
-.mushroom-cream {
-  position: absolute;
-  top: -60px;
-  left: -120px;
-  width: 200px;
-  transform: scaleX(-1) rotate(-5deg);
-  z-index: 0;
-  opacity: 0.95;
-  pointer-events: none;
-  animation: sway 6s ease-in-out infinite alternate;
-}
 
 @keyframes sway {
   0% {
@@ -413,4 +410,10 @@ body.hovering {
   50% {
     filter: drop-shadow(0 0 10px #27FF78);
   }
+}
+
+.main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
 }
