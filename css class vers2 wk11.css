@@ -453,7 +453,7 @@ body.hovering {
 }
 .mushroom-single.mushroom-3 {
   position: absolute;
-  top: -160px; /* Adjust this to fine-tune vertical position */
+  top: -240px; /* Adjust this to fine-tune vertical position */
   left: 100px; /* Adjust this to fine-tune horizontal position */
   width: 90px;
   z-index: 1;
@@ -504,7 +504,7 @@ body.hovering {
 .cap3 {
   position: absolute;
   top: -70px;   /* Move upward to sit on tip */
-  left: 5px;    /* Center horizontally on stem */
+  left: 40px;    /* Center horizontally on stem */
   width: 110%;
   z-index: 1;
   animation: capBob 3s ease-in-out infinite;
