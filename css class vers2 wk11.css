@@ -461,7 +461,7 @@ body.hovering {
 .mushroom3 {
   position: absolute;
   bottom: 280px;   /* Keep your current value */
-  left: -160px;     /* Keep your current value */
+  left: -60px;     /* Keep your current value */
   width: 130px;
   z-index: 1;      /* Puts it behind .textbox3 (z-index: 2) */
   pointer-events: none;
