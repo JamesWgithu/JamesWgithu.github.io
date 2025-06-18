@@ -487,7 +487,7 @@ body.hovering {
 
 .mushroom3 {
   position: absolute;
-  bottom: 100px;   /* Anchors near the bottom of the box */
+  bottom: 250px;   /* Anchors near the bottom of the box */
   left: -70px;    /* Grows from left of the box */
   width: 130px;
   z-index: 0;     /* Behind the content */
@@ -504,7 +504,7 @@ body.hovering {
 .cap3 {
   position: absolute;
   top: -70px;   /* Move upward to sit on tip */
-  left: 40px;    /* Center horizontally on stem */
+  left: -20px;    /* Center horizontally on stem */
   width: 110%;
   z-index: 1;
   animation: capBob 3s ease-in-out infinite;
