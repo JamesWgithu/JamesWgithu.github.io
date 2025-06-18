@@ -453,8 +453,8 @@ body.hovering {
 }
 .mushroom-cluster-fixed {
   position: relative;
-  width: 230px; /* Match the width of the original PNG */
-  height: 320px;
+  width: 125px; /* Match the width of the original PNG */
+  height: 160px;
   margin: 0 auto;
   margin-top: -2rem;
   z-index: 1;
@@ -488,23 +488,23 @@ body.hovering {
 
 /* Position + scale of each mushroom */
 .mushroom-cluster-fixed .mushroom:nth-child(1) {
-  top: 130px;
-  left: 10px;
+  top: 65px;
+  left: 5px;
   transform: scale(0.8);
 }
 .mushroom-cluster-fixed .mushroom:nth-child(2) {
-  top: 110px;
-  left: 65px;
+  top: 55px;
+  left: 30px;
   transform: scale(0.88);
 }
 .mushroom-cluster-fixed .mushroom:nth-child(3) {
-  top: 45px;
-  left: 125px;
+  top: 25px;
+  left: 60px;
   transform: scale(1);
 }
 .mushroom-cluster-fixed .mushroom:nth-child(4) {
-  top: 140px;
-  left: 160px;
+  top: 70px;
+  left: 80px;
   transform: scale(0.82);
 }
 
