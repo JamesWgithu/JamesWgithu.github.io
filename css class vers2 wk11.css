@@ -535,8 +535,8 @@ body.hovering {
 .mushroom4 {
   position: absolute;
   bottom: 300px;
-  left: 50px; /* Farthest right */
-  width: 280px;
+  left: 280px; /* Farthest right */
+  width: 120px;
   z-index: -1;
   pointer-events: none;
 }
@@ -562,8 +562,8 @@ body.hovering {
 .mushroom1 {
   position: absolute;
   bottom: 270px;
-  left: -110px; /* Farthest left */
-  width: 300px;
+  left: 300px; /* Farthest left */
+  width: 130px;
   z-index: -1;
   pointer-events: none;
 }
