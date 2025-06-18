@@ -501,3 +501,86 @@ body.hovering {
     transform: translateY(-6px);
   }
 }
+
+
+
+/* === Mushroom 2 === */
+.mushroom2 {
+  position: absolute;
+  bottom: 280px;
+  left: -20px; /* Adjusted to right of mushroom3 */
+  width: 120px;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.stem2 {
+  width: 100%;
+  position: relative;
+  z-index: -1;
+  animation: stemSway 4s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+.cap2 {
+  position: absolute;
+  top: -38px;
+  left: -32px;
+  width: 120%;
+  z-index: 0;
+  animation: capBob 3s ease-in-out infinite;
+}
+
+/* === Mushroom 4 === */
+.mushroom4 {
+  position: absolute;
+  bottom: 300px;
+  left: 50px; /* Farthest right */
+  width: 120px;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.stem4 {
+  width: 100%;
+  position: relative;
+  z-index: -1;
+  animation: stemSway 4s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+.cap4 {
+  position: absolute;
+  top: -38px;
+  left: -32px;
+  width: 120%;
+  z-index: 0;
+  animation: capBob 3s ease-in-out infinite;
+}
+
+/* === Mushroom 1 === */
+.mushroom1 {
+  position: absolute;
+  bottom: 270px;
+  left: -110px; /* Farthest left */
+  width: 130px;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.stem1 {
+  width: 100%;
+  position: relative;
+  z-index: -1;
+  animation: stemSway 4s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+.cap1 {
+  position: absolute;
+  top: -38px;
+  left: -32px;
+  width: 120%;
+  z-index: 0;
+  animation: capBob 3s ease-in-out infinite;
+}
