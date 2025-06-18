@@ -503,8 +503,8 @@ body.hovering {
 
 .cap3 {
   position: absolute;
-  top: -50px;   /* Move upward to sit on tip */
-  left: -35px;    /* Center horizontally on stem */
+  top: -40px;   /* Move upward to sit on tip */
+  left: -40px;    /* Center horizontally on stem */
   width: 110%;
   z-index: 1;
   animation: capBob 3s ease-in-out infinite;
