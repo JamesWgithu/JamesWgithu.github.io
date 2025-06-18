@@ -451,62 +451,35 @@ body.hovering {
   margin: 0 auto;
   padding: 2rem;
 }
-.mushroom-single.mushroom-3 {
-  position: absolute;
-  top: -240px; /* Adjust this to fine-tune vertical position */
-  left: 100px; /* Adjust this to fine-tune horizontal position */
-  width: 90px;
-  z-index: -1;
-  pointer-events: none;
-}
 
-.mushroom-single.mushroom-3 .stem {
-  width: 100%;
-  display: block;
-  animation: stemSway 4s ease-in-out infinite;
-  transform-origin: bottom center;
-}
 
-.mushroom-single.mushroom-3 .cap {
-  width: 100%;
-  margin-top: -50px; /* ⬅️ Ensures the cap sits atop the stem */
-  animation: capBob 3s ease-in-out infinite;
+.textbox3 {
+  position: relative;
+  z-index: 2; /* The textbox sits above */
 }
-
-/* Keep the animation keyframes */
-@keyframes stemSway {
-  0%, 100% { transform: rotate(0deg); }
-  50% { transform: rotate(2deg); }
-}
-
-@keyframes capBob {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-}
-
 
 .mushroom3 {
   position: absolute;
-  bottom: 280px;   /* Anchors near the bottom of the box */
-  left: -70px;    /* Grows from left of the box */
+  bottom: 280px;   /* Keep your current value */
+  left: -70px;     /* Keep your current value */
   width: 130px;
-  z-index: -1;     /* Behind the content */
+  z-index: 1;      /* Puts it behind .textbox3 (z-index: 2) */
   pointer-events: none;
 }
 
 .stem3 {
   width: 100%;
   position: relative;
-  z-index: -1;   /* Ensure stem stays behind text box */
+  z-index: 1; /* Stem sits behind the box but animates */
   animation: stemSway 4s ease-in-out infinite;
+  transform-origin: bottom center;
 }
 
 .cap3 {
   position: absolute;
-  top: -30px;   /* Move upward to sit on tip */
-  left: -40px;    /* Center horizontally on stem */
+  top: -30px;     /* Keep your current fine-tuned value */
+  left: -40px;    /* Keep your current fine-tuned value */
   width: 110%;
-  z-index: 0;
+  z-index: 2;     /* Ensures cap is above the stem visually */
   animation: capBob 3s ease-in-out infinite;
 }
-
