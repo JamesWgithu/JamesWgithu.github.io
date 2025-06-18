@@ -451,78 +451,35 @@ body.hovering {
   margin: 0 auto;
   padding: 2rem;
 }
-
-.mushroom-cluster-fixed {
-  position: relative;
-  width: 125px; /* Match the width of the original PNG */
-  height: 160px;
-  margin: 0 auto;
-  margin-top: -2rem;
-  z-index: 1;
-}
-
-/* Shared mushroom base styling */
-.mushroom-cluster-fixed .mushroom {
+.mushroom-single.mushroom-3 {
   position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Shared animation */
-.mushroom-cluster-fixed .stem {
-  transform-origin: bottom center;
-  animation: stemSway 4s ease-in-out infinite;
-}
-.mushroom-cluster-fixed .cap {
-  animation: capBob 3s ease-in-out infinite;
+  top: -160px; /* Adjust this to fine-tune vertical position */
+  left: 100px; /* Adjust this to fine-tune horizontal position */
+  width: 90px;
+  z-index: 1;
   pointer-events: none;
 }
+
+.mushroom-single.mushroom-3 .stem {
+  width: 100%;
+  display: block;
+  animation: stemSway 4s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+.mushroom-single.mushroom-3 .cap {
+  width: 100%;
+  margin-top: -50px; /* ⬅️ Ensures the cap sits atop the stem */
+  animation: capBob 3s ease-in-out infinite;
+}
+
+/* Keep the animation keyframes */
 @keyframes stemSway {
   0%, 100% { transform: rotate(0deg); }
   50% { transform: rotate(2deg); }
 }
+
 @keyframes capBob {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-4px); }
-}
-
-/* Position + scale of each mushroom */
-.mushroom-cluster-fixed .mushroom:nth-child(1) {
-  top: 65px;
-  left: 5px;
-  transform: scale(0.8);
-}
-.mushroom-cluster-fixed .mushroom:nth-child(2) {
-  top: 55px;
-  left: 30px;
-  transform: scale(0.88);
-}
-.mushroom-cluster-fixed .mushroom:nth-child(3) {
-  top: 25px;
-  left: 60px;
-  transform: scale(1);
-}
-.mushroom-cluster-fixed .mushroom:nth-child(4) {
-  top: 70px;
-  left: 80px;
-  transform: scale(0.82);
-}
-
-/* Cap placement per stem */
-.mushroom-cluster-fixed .mushroom:nth-child(1) .cap {
-  margin-top: -650px;
-  margin-left: 60px;
-}
-.mushroom-cluster-fixed .mushroom:nth-child(2) .cap {
-  margin-top: -550px;
-  margin-left: 100px;
-}
-.mushroom-cluster-fixed .mushroom:nth-child(3) .cap {
-  margin-top: -900px;
-  margin-left: 40px;
-}
-.mushroom-cluster-fixed .mushroom:nth-child(4) .cap {
-  margin-top: -900px;
-  margin-left: 30px;
+  50% { transform: translateY(-6px); }
 }
