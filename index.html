@@ -8,6 +8,28 @@
 </head>
 <body>
 
+
+  <div id="intro-screen">
+    <div class="intro-message">
+      <p>This website includes sound, video, and interactive content.</p>
+      <button id="continue-button">Click to continue</button>
+    </div>
+  </div>
+  
+  <script>
+    document.getElementById('continue-button').addEventListener('click', () => {
+      const intro = document.getElementById('intro-screen');
+      intro.classList.add('fade-out');
+  
+      // Start video/audio manually (especially if autoplay doesn't trigger)
+      const video = document.querySelector('.corner-video');
+      if (video) {
+        video.play().catch(e => console.log("Autoplay blocked:", e));
+      }
+    });
+  </script>
+
+
   <video class="corner-video" autoplay muted loop playsinline controls>
     <source src="CDS3001lowqualityvidcompressed 240mb.mp4" type="video/mp4">
     Your browser does not support the video tag.
