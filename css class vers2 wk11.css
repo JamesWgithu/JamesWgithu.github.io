@@ -503,7 +503,7 @@ body.hovering {
 
 .cap3 {
   position: absolute;
-  top: -40px;   /* Move upward to sit on tip */
+  top: -30px;   /* Move upward to sit on tip */
   left: -40px;    /* Center horizontally on stem */
   width: 110%;
   z-index: 1;
