@@ -599,6 +599,8 @@ body.hovering {
   z-index: 1;
 }
 
+
+ ------idk about this part below we will see
 footer.credits {
   font-size: 1.2rem; /* ⬅️ Increase size */
   color: #00ff99; /* Brighter neon green for footer */
@@ -618,4 +620,31 @@ footer.credits p {
 
 footer.credits strong {
   color: #00ffd5; /* Optional for emphasis */
+}
+
+footer.credits {
+  font-size: 1.1rem; /* Or bump it to 1.25rem for more impact */
+  line-height: 1.6;
+  text-align: center;
+  color: #00ff88;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  font-family: 'Syne Mono', monospace;
+}
+
+footer.credits p:first-of-type {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 1.5em;
+}
+
+.footer-end-illustration2 {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0 20px;
+}
+
+.footer-end-illustration img {
+  max-width: 80%;
+  height: auto;
 }
