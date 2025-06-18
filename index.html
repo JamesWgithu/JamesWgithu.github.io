@@ -11,22 +11,34 @@
 
   <div id="intro-screen">
     <div class="intro-message">
-      <p>This website includes sound, video, and interactive content.</p>
-      <button id="continue-button">Click to continue</button>
+      <p>🔊 This website includes video, sound, and interactive media.<br>
+      🖥️ Best experienced with headphones and on desktop.</p>
+      <button id="continue-button">Click to Continue</button>
     </div>
   </div>
-  
+
   <script>
+    document.body.style.overflow = 'hidden'; // prevent scroll while locked
+  
     document.getElementById('continue-button').addEventListener('click', () => {
       const intro = document.getElementById('intro-screen');
       intro.classList.add('fade-out');
+      setTimeout(() => {
+        intro.remove();
+        document.body.style.overflow = ''; // allow scroll again
   
-      // Start video/audio manually (especially if autoplay doesn't trigger)
-      const video = document.querySelector('.corner-video');
-      if (video) {
-        video.play().catch(e => console.log("Autoplay blocked:", e));
-      }
+        // Show + start corner video manually
+        const video = document.querySelector('.corner-video');
+        if (video) {
+          video.style.display = 'block';
+          video.play().catch(e => console.log("Autoplay blocked:", e));
+        }
+      }, 1000); // match fade time
     });
+  
+    // 🔒 Optional: Hide video by default in CSS
+    const video = document.querySelector('.corner-video');
+    if (video) video.style.display = 'none';
   </script>
 
 
