@@ -23,25 +23,50 @@
     <img src="root9.png" class="entry-root root9">
     <img src="root10.png" class="entry-root root10">
   </div>
-  <div class="entry-overlay">
-    <p>This site uses audio and animation.<br><br>Click to continue.</p>
-    <button id="enter-button">Enter</button>
+
+
+  <!-- 🔒 Intro Overlay -->
+  <div id="intro-overlay">
+    <div class="roots-container">
+      <img src="roots1.png" class="root-img root1">
+      <img src="roots2.png" class="root-img root2">
+      <img src="root3.png" class="root-img root3">
+      <img src="root4.png" class="root-img root4">
+      <img src="root5.png" class="root-img root5">
+      <img src="root6.png" class="root-img root6">
+      <img src="root7.png" class="root-img root7">
+      <img src="root8.png" class="root-img root8">
+      <img src="root9.png" class="root-img root9">
+      <img src="root10.png" class="root-img root10">
+    </div>
+    <button id="enter-btn">Enter Site</button>
   </div>
-</div>
 
-<script>
-  document.getElementById('enter-button').addEventListener('click', () => {
-    const roots = document.querySelectorAll('.entry-root');
-    roots.forEach(root => {
-      root.classList.add('exit');
+  <!-- 🔇 Hidden Video Until Site Enters -->
+  <video class="corner-video" autoplay muted loop playsinline controls style="display: none;">
+    <source src="CDS3001lowqualityvidcompressed 240mb.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- 🟢 Main Content START -->
+  <div id="main-content" style="display: none;">
+    <!-- Your existing website content continues from here -->
+    <!-- ... everything else remains unchanged ... -->
+  </div>
+
+  <!-- 🧠 Script to control access -->
+  <script>
+    document.getElementById('enter-btn').addEventListener('click', () => {
+      document.getElementById('intro-overlay').style.display = 'none';
+      document.getElementById('main-content').style.display = 'block';
+      document.querySelector('.corner-video').style.display = 'block';
+      document.body.style.overflow = 'auto';
     });
+  </script>
 
-    // Hide entry screen after animation
-    setTimeout(() => {
-      document.getElementById('entry-screen').style.display = 'none';
-    }, 2000); // matches transition duration
-  });
-</script>
+
+</body>
+</html>
 
 
 

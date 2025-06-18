@@ -673,78 +673,74 @@ footer.credits p:first-of-type {
   letter-spacing: 0.5px;
 }
 
-/* 🔒 ENTRY SCREEN ROOT ANIMATION */
-#entry-screen {
+/* 🔒 Fullscreen Intro Overlay */
+#intro-overlay {
   position: fixed;
-  inset: 0;
-  background: black;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
   z-index: 9999;
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-direction: column;
-}
-
-.entry-roots {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
+  align-items: center;
   overflow: hidden;
 }
 
-.entry-root {
+/* 🌿 Root Images Positioned Over Whole Screen */
+.root-img {
   position: absolute;
-  max-width: 300px;
-  opacity: 0.85;
-  transition: transform 2s ease, opacity 2s ease;
+  width: 25vw;
+  height: auto;
+  opacity: 0.8;
+  pointer-events: none;
 }
 
-/* 🌿 Position each root manually or via percentage (mockup) */
-.root1 { top: 5%; left: 5%; transform: rotate(0deg); }
-.root2 { top: 10%; right: 10%; transform: rotate(30deg); }
-.root3 { bottom: 15%; left: 20%; transform: rotate(-20deg); }
-.root4 { bottom: 10%; right: 20%; transform: rotate(10deg); }
-.root5 { top: 25%; left: 40%; transform: rotate(-10deg); }
-.root6 { top: 60%; right: 5%; transform: rotate(15deg); }
-.root7 { top: 40%; left: 60%; transform: rotate(-5deg); }
-.root8 { bottom: 5%; left: 50%; transform: rotate(25deg); }
-.root9 { top: 50%; right: 30%; transform: rotate(-15deg); }
-.root10 { bottom: 20%; right: 40%; transform: rotate(10deg); }
+/* Position each root image manually – fine-tune if needed */
+#root1 { top: 0; left: 0; }
+#root2 { top: 0; left: 25vw; }
+#root3 { top: 0; left: 50vw; }
+#root4 { top: 0; left: 75vw; }
+#root5 { top: 50vh; left: 0; }
+#root6 { top: 50vh; left: 25vw; }
+#root7 { top: 50vh; left: 50vw; }
+#root8 { top: 50vh; left: 75vw; }
+#root9 { top: 25vh; left: 12.5vw; }
+#root10 { top: 25vh; left: 62.5vw; }
 
-/* 🧩 Entry Text */
-.entry-overlay {
-  z-index: 10;
-  color: #00ff99;
-  text-align: center;
-  font-family: 'Syne Mono', monospace;
-  font-size: 1.3rem;
-  padding: 2rem;
-  background: rgba(0, 0, 0, 0.8);
-  border: 2px solid #00ff99;
-  border-radius: 12px;
-  box-shadow: 0 0 20px #00ff99;
-}
-
+/* 🎬 Intro Button Styling */
 #enter-button {
-  margin-top: 1.5rem;
-  font-size: 1.2rem;
-  background: transparent;
-  border: 2px solid #00ff99;
-  color: #00ff99;
-  padding: 0.5rem 1.5rem;
-  cursor: pointer;
+  z-index: 10000;
+  padding: 1rem 2rem;
+  background-color: #a6f39e;
+  border: none;
+  font-size: 1.5rem;
   font-family: 'Syne Mono', monospace;
-  transition: all 0.3s ease;
+  color: black;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
 }
 
 #enter-button:hover {
-  background: #00ff99;
-  color: black;
+  transform: scale(1.1);
 }
 
-/* 🚪 Exit animation */
-.entry-root.exit {
-  transform: scale(3) translateY(-200%) rotate(360deg);
-  opacity: 0;
+/* 🧽 Hide main content and video initially */
+body.locked {
+  overflow: hidden;
+}
+
+#main-content {
+  display: none;
+}
+
+/* Show corner video after intro */
+.corner-video {
+  display: none;
+}
+
+body.unlocked .corner-video {
+  display: block;
 }
