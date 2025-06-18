@@ -511,18 +511,18 @@ body.hovering {
 
 /* Cap placement per stem */
 .mushroom-cluster-fixed .mushroom:nth-child(1) .cap {
-  margin-top: 176px;
-  margin-left: 0px;
+  margin-top: 65px;
+  margin-left: 5px;
 }
 .mushroom-cluster-fixed .mushroom:nth-child(2) .cap {
-  margin-top: 184px;
-  margin-left: -16px;
+  margin-top: 55px;
+  margin-left: 30px;
 }
 .mushroom-cluster-fixed .mushroom:nth-child(3) .cap {
-  margin-top: 208px;
-  margin-left: -32px;
+  margin-top: 25px;
+  margin-left: 60px;
 }
 .mushroom-cluster-fixed .mushroom:nth-child(4) .cap {
-  margin-top: 168px;
-  margin-left: -8px;
+  margin-top: 70px;
+  margin-left: 80px;
 }
