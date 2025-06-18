@@ -508,14 +508,14 @@ body.hovering {
 .mushroom2 {
   position: absolute;
   bottom: 280px;
-  left: 260px; /* Adjusted to right of mushroom3 */
+  left: 280px; /* Adjusted to right of mushroom3 */
   width: 120px;
   z-index: -1;
   pointer-events: none;
 }
 
 .stem2 {
-  width: 100%;
+  width: 85%;
   position: relative;
   z-index: -1;
   animation: stemSway 4s ease-in-out infinite;
