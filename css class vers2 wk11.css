@@ -645,6 +645,14 @@ footer.credits p:first-of-type {
 }
 
 .footer-end-illustration img {
-  max-width: 80%;
+  max-width: 30%;
   height: auto;
+}
+
+/* 📱 Responsive adjustments for footer text */
+@media (max-width: 600px) {
+  .credits {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
 }
