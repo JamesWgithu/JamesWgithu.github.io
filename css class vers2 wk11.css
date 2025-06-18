@@ -483,3 +483,12 @@ body.hovering {
   z-index: 2;     /* Ensures cap is above the stem visually */
   animation: capBob 3s ease-in-out infinite;
 }
+
+@keyframes stemSway {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+}
