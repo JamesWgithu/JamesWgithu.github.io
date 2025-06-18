@@ -647,8 +647,8 @@ footer.credits p:first-of-type {
 }
 
 .footer-vine img {
-  width: 90%;
-  max-width: 800px;
+  width: 180%;
+  max-width: screen;
   height: auto;
   object-fit: contain;
   opacity: 0.85;
