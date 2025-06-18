@@ -443,3 +443,54 @@ body.hovering {
   margin: 0 auto;
   padding: 2rem;
 }
+
+.quote-container.mushroom-cluster {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  gap: 2rem;
+  padding-bottom: 4rem;
+  flex-wrap: wrap;
+}
+
+.mushroom-cluster .mushroom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+@keyframes capBob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes stemSway {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(2deg); }
+}
+
+/* CAP bobbing animation */
+.mushroom-cluster .cap {
+  animation: capBob 3s ease-in-out infinite;
+  animation-fill-mode: both;
+}
+
+/* STEM gentle swaying animation */
+.mushroom-cluster .stem {
+  animation: stemSway 4s ease-in-out infinite;
+  animation-fill-mode: both;
+  transform-origin: bottom center;
+}
+
+/* STAGGERED DELAYS for natural motion */
+.mushroom-cluster .mushroom:nth-child(1) .cap { animation-delay: 0s; }
+.mushroom-cluster .mushroom:nth-child(2) .cap { animation-delay: 0.4s; }
+.mushroom-cluster .mushroom:nth-child(3) .cap { animation-delay: 0.8s; }
+.mushroom-cluster .mushroom:nth-child(4) .cap { animation-delay: 1.2s; }
+
+.mushroom-cluster .mushroom:nth-child(1) .stem { animation-delay: 0s; }
+.mushroom-cluster .mushroom:nth-child(2) .stem { animation-delay: 0.5s; }
+.mushroom-cluster .mushroom:nth-child(3) .stem { animation-delay: 1s; }
+.mushroom-cluster .mushroom:nth-child(4) .stem { animation-delay: 1.5s; }
