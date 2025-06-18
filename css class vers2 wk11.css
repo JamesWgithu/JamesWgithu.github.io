@@ -56,6 +56,7 @@ body, html {
   font-family: 'Syne mono', monospace;
 }
 
+
 .content-box {
   font-family: 'Syne Mono', monospace;
   font-size: 20px;
@@ -66,7 +67,7 @@ body, html {
   box-shadow: 0 0 0 4px black, 0 0 0 6px #00ffcc;
   border-radius: 20px;
   padding: 2rem;
-  margin: 5rem auto;
+  margin: 4rem auto; /* updated from 5rem to 4rem and balanced */
   max-width: 800px;
   position: relative;
   z-index: 2;
@@ -138,17 +139,38 @@ body, html {
   margin-left: 3rem;
   margin-right: auto;
   max-width: 600px;
+  text-align: left;
 }
 
 .box-right {
   margin-right: 3rem;
   margin-left: auto;
   max-width: 600px;
+  text-align: left;
 }
 
 .box-center {
   margin: 3rem auto;
-  max-width: 800px;
+  max-width: 700px;
+  text-align: left;
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-30px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(30px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.box-left {
+  animation: slideInLeft 0.8s ease;
+}
+
+.box-right {
+  animation: slideInRight 0.8s ease;
 }
 
 .book-cover {
