@@ -487,17 +487,17 @@ body.hovering {
 
 .mushroom3 {
   position: absolute;
-  bottom: 280px;   /* Anchors near the bottom of the box */
+  bottom: 300px;   /* Anchors near the bottom of the box */
   left: -70px;    /* Grows from left of the box */
   width: 130px;
-  z-index: -1;     /* Behind the content */
+  z-index: 0;     /* Behind the content */
   pointer-events: none;
 }
 
 .stem3 {
   width: 100%;
   position: relative;
-  z-index: -1;   /* Ensure stem stays behind text box */
+  z-index: 0;   /* Ensure stem stays behind text box */
   animation: stemSway 4s ease-in-out infinite;
   transform-origin: bottom center;
 }
@@ -507,9 +507,7 @@ body.hovering {
   top: -30px;   /* Move upward to sit on tip */
   left: -40px;    /* Center horizontally on stem */
   width: 110%;
-  z-index: -1;
+  z-index: 1;
   animation: capBob 3s ease-in-out infinite;
 }
-
-
 
