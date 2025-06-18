@@ -477,7 +477,7 @@ body.hovering {
 
 .cap3 {
   position: absolute;
-  top: -30px;     /* Keep your current fine-tuned value */
+  top: -25px;     /* Keep your current fine-tuned value */
   left: -40px;    /* Keep your current fine-tuned value */
   width: 110%;
   z-index: 2;     /* Ensures cap is above the stem visually */
@@ -524,7 +524,7 @@ body.hovering {
 
 .cap2 {
   position: absolute;
-  top: -16px;
+  top: -13px;
   left: -25px;
   width: 120%;
   z-index: 0;
