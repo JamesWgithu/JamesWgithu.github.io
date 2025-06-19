@@ -57,7 +57,6 @@ body, html {
   font-family: 'Syne mono', monospace;
 }
 
-
 .content-box {
   font-family: 'Syne Mono', monospace;
   font-size: 20px;
@@ -70,39 +69,41 @@ body, html {
   margin: 6rem auto;
   max-width: 800px;
   position: relative;
-  z-index: 2;
+  z-index: 1;
   overflow: visible;
 }
 
-.content-box::before {
+.content-box::after {
   content: '';
   position: absolute;
-  top: -18px;
-  left: -18px;
-  right: -18px;
-  bottom: -18px;
-  border-radius: 28px;
-  background: #00ffaa;
-  opacity: 0;
-  transition: opacity 0.4s ease;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 30px;
+  background: linear-gradient(270deg, #00ffaa, #00ccff, #00ffaa);
+  background-size: 600% 600%;
   z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  animation: border-pulse 6s ease infinite;
+  filter: blur(10px);
   pointer-events: none;
-  filter: blur(25px);
 }
 
-.content-box:hover::before {
+.content-box:hover::after {
   opacity: 1;
-  animation: outerGlowPulse 2.5s ease-in-out infinite;
 }
 
-@keyframes outerGlowPulse {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 0.75;
+@keyframes border-pulse {
+  0% {
+    background-position: 0% 50%;
   }
   50% {
-    transform: scale(1.03);
-    opacity: 1;
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
