@@ -706,3 +706,42 @@ footer.credits p:first-of-type {
   letter-spacing: 0.5px;
 }
 
+.content-box-wrapper {
+  position: relative;
+  margin: 6rem auto;
+  max-width: 800px;
+}
+
+.content-box-wrapper::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  right: -12px;
+  bottom: -12px;
+  border-radius: 28px;
+  background: linear-gradient(120deg, #00ffaa, #00ccff, #00ffaa);
+  background-size: 300% 300%;
+  animation: animated-border 6s ease infinite;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  filter: blur(10px); /* makes glow soft and outer */
+}
+
+.content-box-wrapper:hover::before {
+  opacity: 1;
+}
+
+@keyframes animated-border {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
