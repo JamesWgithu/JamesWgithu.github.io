@@ -75,7 +75,6 @@ body, html {
   transition: transform 0.4s ease; /* optional scale effect */
 }
 
-/* 🔮 Outer animated glow effect — shown only on hover */
 .content-box::before {
   content: '';
   position: absolute;
@@ -83,30 +82,30 @@ body, html {
   left: -4px;
   right: -4px;
   bottom: -4px;
-  border-radius: 22px; /* slightly larger to wrap around */
-  background: linear-gradient(120deg, #00ffaa, #00ccff, #00ffaa);
-  background-size: 300% 300%;
-  animation: animated-border 6s ease infinite;
+  border-radius: 22px;
+  background: #00ffaa;
   z-index: -1;
   opacity: 0;
-  transition: opacity 0.4s ease;
+  transition: opacity 0.3s ease;
   pointer-events: none;
-  filter: blur(6px); /* outer glow look */
+  filter: blur(10px); /* soft glow */
 }
 
 .content-box:hover::before {
   opacity: 1;
+  animation: pulse-glow 2s ease-in-out infinite;
 }
 
-@keyframes animated-border {
-  0% {
-    background-position: 0% 50%;
+@keyframes pulse-glow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+    filter: blur(8px);
   }
   50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
+    transform: scale(1.05);
+    opacity: 1;
+    filter: blur(14px);
   }
 }
 
