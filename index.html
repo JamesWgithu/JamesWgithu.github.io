@@ -9,63 +9,8 @@
 <body>
 
 
-  <!-- 🔒 ENTRY SCREEN HTML WITH ROOTS -->
-<div id="entry-screen">
-  <div class="entry-roots">
-    <img src="root1.png" class="entry-root root1">
-    <img src="root2.png" class="entry-root root2">
-    <img src="root3.png" class="entry-root root3">
-    <img src="root4.png" class="entry-root root4">
-    <img src="root5.png" class="entry-root root5">
-    <img src="root6.png" class="entry-root root6">
-    <img src="root7.png" class="entry-root root7">
-    <img src="root8.png" class="entry-root root8">
-    <img src="root9.png" class="entry-root root9">
-    <img src="root10.png" class="entry-root root10">
-  </div>
 
 
-  <!-- 🔒 Intro Overlay -->
-  <div id="intro-overlay">
-    <div class="roots-container">
-      <img src="roots1.png" class="root-img root1">
-      <img src="roots2.png" class="root-img root2">
-      <img src="root3.png" class="root-img root3">
-      <img src="root4.png" class="root-img root4">
-      <img src="root5.png" class="root-img root5">
-      <img src="root6.png" class="root-img root6">
-      <img src="root7.png" class="root-img root7">
-      <img src="root8.png" class="root-img root8">
-      <img src="root9.png" class="root-img root9">
-      <img src="root10.png" class="root-img root10">
-    </div>
-    <button id="enter-btn">Enter Site</button>
-  </div>
-
-  <!-- 🔇 Hidden Video Until Site Enters -->
-  <video class="corner-video" autoplay muted loop playsinline controls style="display: none;">
-    <source src="CDS3001lowqualityvidcompressed 240mb.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-
-  <!-- 🟢 Main Content START -->
-  <div id="main-content" style="display: none;">
-    <!-- Your existing website content continues from here -->
-    <!-- ... everything else remains unchanged ... -->
-  </div>
-
-  <!-- 🧠 Script to control access -->
-  <script>
-    document.getElementById('enter-btn').addEventListener('click', () => {
-      document.getElementById('intro-overlay').style.display = 'none';
-      document.getElementById('main-content').style.display = 'block';
-      document.querySelector('.corner-video').style.display = 'block';
-      document.body.style.overflow = 'auto';
-    });
-  </script>
-
-
-</body>
 </html>
 
 
