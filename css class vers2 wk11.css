@@ -66,7 +66,7 @@ body, html {
   background-color: #e9fff0;
   border: 2px solid #00ffcc;
   border-radius: 20px;
-  padding: 2rem 2.5rem;
+  padding: 2.5rem;
   margin: 6rem auto;
   max-width: 800px;
   position: relative;
@@ -782,7 +782,7 @@ footer.credits p:first-of-type {
   opacity: 0;
   transition: opacity 0.4s ease;
   z-index: -1;
-  filter: blur(8px);
+  filter: blur(4px);
   pointer-events: none;
   top: -10px;
   left: -10px;
