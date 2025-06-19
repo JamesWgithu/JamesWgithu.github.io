@@ -747,3 +747,11 @@ body.locked {
 body.unlocked .corner-video {
   display: block;
 }
+
+#intro-screen {
+  transition: opacity 1s ease;
+}
+#intro-screen.hidden {
+  opacity: 0;
+  pointer-events: none;
+}

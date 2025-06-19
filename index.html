@@ -473,5 +473,20 @@ New tools and perspectives may offer <span class="bold1">frontiers to exploit â€
   });
 </script>
 
+<script>
+  document.getElementById("enter-button").addEventListener("click", function () {
+    const intro = document.getElementById("intro-screen");
+    intro.classList.add("hidden"); // fade out via CSS class
+
+    setTimeout(() => {
+      intro.style.display = "none"; // fully hide after fade
+      document.getElementById("site-content").style.display = "block"; // reveal main site
+      window.scrollTo(0, 0); // scroll to top of page
+    }, 1000); // 1 second fade duration (match your CSS)
+  });
+</script>
+
+
+
 </body>
 </html>
