@@ -57,7 +57,6 @@ body, html {
   font-family: 'Syne mono', monospace;
 }
 
-
 .content-box {
   font-family: 'Syne Mono', monospace;
   font-size: 20px;
@@ -68,14 +67,15 @@ body, html {
   box-shadow: 0 0 0 4px black, 0 0 0 6px #00ffcc;
   border-radius: 20px;
   padding: 2rem;
-  margin: 6rem auto; /* updated from 5rem to 4rem and balanced */
+  margin: 6rem auto;
   max-width: 800px;
   position: relative;
   z-index: 2;
-  overflow: visible;
-  position: relative;
+  overflow: visible; /* ✅ allow glowing border outside */
+  transition: transform 0.4s ease; /* optional scale effect */
 }
 
+/* 🔮 Outer animated glow effect — shown only on hover */
 .content-box::before {
   content: '';
   position: absolute;
@@ -83,7 +83,7 @@ body, html {
   left: -4px;
   right: -4px;
   bottom: -4px;
-  border-radius: 22px; /* Slightly larger than .content-box border */
+  border-radius: 22px; /* slightly larger to wrap around */
   background: linear-gradient(120deg, #00ffaa, #00ccff, #00ffaa);
   background-size: 300% 300%;
   animation: animated-border 6s ease infinite;
@@ -91,7 +91,7 @@ body, html {
   opacity: 0;
   transition: opacity 0.4s ease;
   pointer-events: none;
-  filter: blur(6px); /* soft glow outside */
+  filter: blur(6px); /* outer glow look */
 }
 
 .content-box:hover::before {
