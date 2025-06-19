@@ -112,7 +112,7 @@ body, html {
 
 
 .bold1 {
-  color: #142a2a;
+  color: #1e002b;
   font-weight: bolder;
 }
 
@@ -682,6 +682,7 @@ footer.credits p:first-of-type {
 .content-box-wrapper {
   position: relative;
   transition: transform 0.4s ease;
+  margin: 6rem 0; /* ✅ adds vertical spacing above and below each box */
 }
 
 /* Aligned wrapper variants */
@@ -834,3 +835,8 @@ footer.credits p:first-of-type {
 }
 
 
+@media (max-width: 600px) {
+  .content-box-wrapper {
+    margin: 3rem 0; /* ✅ tighter vertical spacing on small screens */
+  }
+}
