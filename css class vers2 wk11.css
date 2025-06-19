@@ -776,11 +776,6 @@ footer.credits p:first-of-type {
 .content-box-wrapper-glow::before {
   content: '';
   position: absolute;
-  top: -8px;
-  left: -8px;
-  right: -8px;
-  bottom: -8px;
-  border-radius: 24px;
   background: linear-gradient(270deg, #00ffaa, #00ccff, #00ffaa);
   background-size: 300% 300%;
   animation: animated-border 8s ease infinite;
@@ -789,6 +784,11 @@ footer.credits p:first-of-type {
   z-index: -1;
   filter: blur(8px);
   pointer-events: none;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 30px;
 }
 
 .content-box-wrapper-glow:hover::before {
@@ -807,4 +807,11 @@ footer.credits p:first-of-type {
     background-position: 0% 50%;
   }
 }
+
+.content-box-wrapper,
+.content-box-wrapper-glow {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+
 
