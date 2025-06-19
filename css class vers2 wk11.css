@@ -72,7 +72,38 @@ body, html {
   max-width: 800px;
   position: relative;
   z-index: 2;
+  overflow: hidden;
 }
+
+.content-box::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(60deg, #00ffaa, #00ccff, #00ffaa);
+  background-size: 300% 300%;
+  animation: animated-border 6s ease infinite;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.4s ease;
+}
+
+.content-box:hover::before {
+  opacity: 1;
+}
+
+@keyframes animated-border {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 
 .content-box-Paracont {
   margin-bottom: 1.5rem;
