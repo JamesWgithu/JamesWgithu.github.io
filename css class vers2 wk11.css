@@ -55,6 +55,7 @@ body, html {
   background-color: black;
   display: inline-block;
   font-family: 'Syne mono', monospace;
+  text-shadow: 0 0 8px rgba(250, 0, 255, 0.4);
 }
 
 .content-box {
@@ -71,6 +72,7 @@ body, html {
   position: relative;
   z-index: 1;
   overflow: visible;
+  transition: transform 0.4s ease;
 }
 
 
@@ -673,14 +675,36 @@ footer.credits p:first-of-type {
   letter-spacing: 0.5px;
 }
 
+
+/* Shared wrapper base */
 .content-box-wrapper {
   position: relative;
-  margin: 6rem auto;
-  max-width: 800px;
   transition: transform 0.4s ease;
 }
 
-.content-box-wrapper::before {
+/* Aligned wrapper variants */
+.content-box-wrapper-left {
+  margin-left: 3rem;
+  margin-right: auto;
+  max-width: 600px;
+}
+
+.content-box-wrapper-right {
+  margin-left: auto;
+  margin-right: 3rem;
+  max-width: 600px;
+}
+
+.content-box-wrapper-center {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px;
+}
+
+/* Glow effect for all variants */
+.content-box-wrapper-left::before,
+.content-box-wrapper-right::before,
+.content-box-wrapper-center::before {
   content: '';
   position: absolute;
   top: -12px;
@@ -695,14 +719,16 @@ footer.credits p:first-of-type {
   opacity: 0;
   transition: opacity 0.4s ease;
   pointer-events: none;
-  filter: blur(10px); /* makes glow soft and outer */
- 
+  filter: blur(10px);
 }
 
-.content-box-wrapper:hover::before {
+.content-box-wrapper-left:hover::before,
+.content-box-wrapper-right:hover::before,
+.content-box-wrapper-center:hover::before {
   opacity: 1;
-  
 }
+
+  
 
 @keyframes animated-border {
   0% {
@@ -727,4 +753,13 @@ footer.credits p:first-of-type {
 
 .content-box-wrapper:hover p {
   opacity: 1;
+}
+
+.content-box:focus-within {
+  outline: none;
+  box-shadow: 0 0 0 4px black, 0 0 0 6px #00ffcc, 0 0 10px 4px #00ffaa;
+}
+
+.content-box-wrapper:hover .content-box {
+  transform: scale(1.005);
 }
