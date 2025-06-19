@@ -56,6 +56,7 @@ body, html {
   display: inline-block;
   font-family: 'Syne mono', monospace;
   text-shadow: 0 0 8px rgba(250, 0, 255, 0.4);
+  padding-bottom: 2rem; /* or try 3rem for more softness */
 }
 
 .content-box {
@@ -842,10 +843,3 @@ footer.credits p:first-of-type {
   }
 }
 
-.content-box-wrapper-left,
-.content-box-wrapper-right,
-.content-box-wrapper-center {
-  max-width: 700px; /* ✅ wider text area */
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
