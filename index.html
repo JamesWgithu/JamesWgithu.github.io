@@ -118,7 +118,7 @@
 <div class="content-box-wrapper-center content-box-wrapper-glow">
 <div class="grow-container">
         <img src="shrrombright1.png" alt="Mushroom Illustration" class="mushroom-img-right">
-    <section class="content-box tan">
+    <section id="grow-box" class="content-box tan">
 <p> Mind and meaning exist through relationship — with everything else, living or not. Elevating human agency above all others makes little sense.
  Our minds, like our bodies, are contingent on everything else. The path forward should involve moving with the wider world,
   not trying to escape or surpass it.
@@ -504,6 +504,53 @@ spores at start
   });
 </script>
 
+
+muklticolourshrooms1
+<script>
+  const box = document.querySelector(".content-box.tan");
+  const mushroom = document.querySelector(".mushroom-img-right");
+  const video = document.querySelector("video");
+  let animationTriggered = false;
+
+  // 👉 Hover trigger
+  [box, mushroom].forEach(el => {
+    el.addEventListener("mouseenter", () => triggerMushroomAnimation());
+    el.addEventListener("mouseleave", () => {
+      mushroom.classList.remove("mushroom-animate", "mushroom-grow");
+    });
+  });
+
+  // 👉 Scroll into view trigger
+  const mushroomObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !animationTriggered) {
+      triggerMushroomAnimation();
+      animationTriggered = true;
+    }
+  });
+}, { threshold: 0.5 });
+
+  observer.observe(box);
+
+  // 👉 Time-based trigger (between 3:10 and 3:30)
+  if (video) {
+    video.addEventListener("timeupdate", () => {
+      const currentTime = video.currentTime;
+      if (currentTime >= 190 && currentTime <= 210 && !animationTriggered) {
+        triggerMushroomAnimation();
+        animationTriggered = true;
+      }
+    });
+  }
+
+  // 🌱 Trigger animation logic
+  function triggerMushroomAnimation() {
+    mushroom.classList.add("mushroom-grow", "mushroom-animate");
+    setTimeout(() => {
+      mushroom.classList.remove("mushroom-grow");
+    }, 2000); // Remove grow after 2 seconds
+  }
+</script>
 
 </div> <!-- end of site-content -->
 </body>
