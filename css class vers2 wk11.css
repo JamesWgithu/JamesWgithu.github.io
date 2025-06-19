@@ -76,11 +76,11 @@ body, html {
 .content-box::after {
   content: '';
   position: absolute;
-  top: -10px;
-  left: -10px;
-  right: -10px;
-  bottom: -10px;
-  border-radius: 30px;
+  top: -12px;
+  left: -12px;
+  right: -12px;
+  bottom: -12px;
+  border-radius: 22px;
   background: linear-gradient(270deg, #00ffaa, #00ccff, #00ffaa);
   background-size: 600% 600%;
   z-index: -1;
