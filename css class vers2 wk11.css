@@ -594,7 +594,7 @@ body.hovering {
 
 .mushroom-wrapper {
   position: absolute;
-  bottom: -170px; /* or tweak */
+  bottom: -70px; /* or tweak */
   left: 200px;    /* or tweak */
   transform: rotate(-20deg);
   transform-origin: bottom center;
@@ -762,4 +762,35 @@ footer.credits p:first-of-type {
 
 .content-box-wrapper:hover .content-box {
   transform: scale(1.005);
+}
+
+/* 🟢 Apply outer glow to wrapper instead of content-box */
+.content-box-wrapper-glow {
+  position: relative;
+  display: inline-block;
+  max-width: 850px;
+  margin: 6rem auto;
+  z-index: 1;
+}
+
+.content-box-wrapper-glow::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border-radius: 24px;
+  background: linear-gradient(270deg, #00ffaa, #00ccff, #00ffaa);
+  background-size: 300% 300%;
+  animation: animated-border 8s ease infinite;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+  filter: blur(8px);
+  pointer-events: none;
+}
+
+.content-box-wrapper-glow:hover::before {
+  opacity: 1;
 }
