@@ -40,7 +40,7 @@
         <div class="green-line"></div>
     </section>
 
-    <h2 class="subtitle">It’s lonely at the top, but it doesn’t have to be...</h2>
+    <h2 id="moving-text"class="subtitle">It’s lonely at the top, but it doesn’t have to be...</h2>
 
     <section>
       <div class="green-line"></div>
@@ -469,6 +469,28 @@ New tools and perspectives may offer <span class="bold1">frontiers to exploit �
   });
 </script>
 
+<script>
+  const text = document.getElementById("moving-text");
+
+  const interval = setInterval(() => {
+    const spore = document.createElement("div");
+    spore.classList.add("spore");
+    const rect = text.getBoundingClientRect();
+
+    spore.style.left = `${rect.left + window.scrollX + text.offsetWidth / 2}px`;
+    spore.style.top = `${rect.top + window.scrollY + text.offsetHeight / 2}px`;
+
+    document.body.appendChild(spore);
+
+    setTimeout(() => {
+      spore.remove();
+    }, 2000); // match fadeSpore timing
+  }, 150); // spore frequency
+
+  setTimeout(() => {
+    clearInterval(interval);
+  }, 10200); // run for 10.2 seconds
+</script>
 
 </div> <!-- end of site-content -->
 </body>
