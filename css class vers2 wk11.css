@@ -841,3 +841,11 @@ footer.credits p:first-of-type {
     margin: 3rem 0; /* ✅ tighter vertical spacing on small screens */
   }
 }
+
+.content-box-wrapper-left,
+.content-box-wrapper-right,
+.content-box-wrapper-center {
+  max-width: 700px; /* ✅ wider text area */
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
