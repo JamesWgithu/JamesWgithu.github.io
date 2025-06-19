@@ -308,7 +308,7 @@ body, html {
   width: 280px;
   transform: scaleX(-1) rotate(-2deg);
   transform-origin: bottom center;
-  z-index: 0;
+  z-index: 1;
   opacity: 0.9;
   pointer-events: none;
   animation: sway 6s ease-in-out infinite;
@@ -764,14 +764,11 @@ footer.credits p:first-of-type {
   transform: scale(1.005);
 }
 
-/* 🟢 Apply outer glow to wrapper instead of content-box */
 .content-box-wrapper-glow {
   position: relative;
-  display: inline-block;
-  max-width: 850px;
-  margin: 6rem auto;
   z-index: 1;
 }
+
 
 .content-box-wrapper-glow::before {
   content: '';
@@ -795,26 +792,6 @@ footer.credits p:first-of-type {
   opacity: 1;
 }
 
-.content-box::before {
-  content: '';
-  position: absolute;
-  top: -6px;
-  left: -6px;
-  right: -6px;
-  bottom: -6px;
-  border-radius: 26px;
-  background: linear-gradient(270deg, #00ffaa, #00ccff, #00ffaa);
-  background-size: 400% 400%;
-  animation: glowPulse 6s ease infinite;
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  filter: blur(12px);
-}
-
-.content-box:hover::before {
-  opacity: 1;
-}
 
 @keyframes glowPulse {
   0% {
@@ -828,17 +805,3 @@ footer.credits p:first-of-type {
   }
 }
 
-.content-box-wrapper {
-  display: flex;
-  justify-content: center; /* default to center */
-  margin: 4rem 0;
-  position: relative;
-}
-
-.content-box-wrapper.box-left {
-  justify-content: flex-start;
-}
-
-.content-box-wrapper.box-right {
-  justify-content: flex-end;
-}
