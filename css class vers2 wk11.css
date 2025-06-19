@@ -225,6 +225,7 @@ body, html {
   width: 140px;
   z-index: 1;
   transition: transform 5s ease-in-out;
+  transform-origin: center;
 }
 
 /* Mushroom grow effect */
@@ -890,5 +891,18 @@ footer.credits p:first-of-type {
   to {
     opacity: 0;
     transform: scale(0.6);
+  }
+}
+
+.mushroom-grow {
+  animation: mushroomScale 5s ease-in-out forwards;
+}
+
+@keyframes mushroomScale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(2);
   }
 }
