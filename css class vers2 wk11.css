@@ -677,6 +677,7 @@ footer.credits p:first-of-type {
   position: relative;
   margin: 6rem auto;
   max-width: 800px;
+  transition: transform 0.4s ease;
 }
 
 .content-box-wrapper::before {
@@ -695,10 +696,12 @@ footer.credits p:first-of-type {
   transition: opacity 0.4s ease;
   pointer-events: none;
   filter: blur(10px); /* makes glow soft and outer */
+ 
 }
 
 .content-box-wrapper:hover::before {
   opacity: 1;
+  
 }
 
 @keyframes animated-border {
@@ -711,4 +714,17 @@ footer.credits p:first-of-type {
   100% {
     background-position: 0% 50%;
   }
+}
+
+.content-box-wrapper:hover {
+  transform: scale(1.01) rotate(0.2deg);
+}
+
+.content-box p {
+  opacity: 0.95;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.content-box-wrapper:hover p {
+  opacity: 1;
 }
