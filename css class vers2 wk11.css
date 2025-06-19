@@ -594,7 +594,7 @@ body.hovering {
 
 .mushroom-wrapper {
   position: absolute;
-  bottom: -120px; /* or tweak */
+  bottom: -150px; /* or tweak */
   left: 200px;    /* or tweak */
   transform: rotate(-20deg);
   transform-origin: bottom center;
