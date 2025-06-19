@@ -843,31 +843,23 @@ footer.credits p:first-of-type {
   }
 }
 
-
 #moving-text {
   position: relative;
   display: inline-block;
-  animation: moveTextToCorner 10s ease-out forwards;
   z-index: 10;
+  transition: transform 10s ease;
 }
 
-/* Spores: simple pale ellipse trail */
 .spore {
   position: absolute;
   width: 8px;
   height: 8px;
-  background-color: #fb00ff; /* Matches your pink highlight */
+  background-color: #fb00ff;
   border-radius: 50%;
   opacity: 0.7;
   pointer-events: none;
   z-index: 2;
   animation: fadeSpore 2s forwards;
-}
-
-@keyframes moveTextToCorner {
-  to {
-    transform: translate(-45vw, -30vh); /* Adjust if needed */
-  }
 }
 
 @keyframes fadeSpore {

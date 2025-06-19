@@ -469,28 +469,41 @@ New tools and perspectives may offer <span class="bold1">frontiers to exploit �
   });
 </script>
 
+
+
+spores at start 
 <script>
   const text = document.getElementById("moving-text");
 
-  const interval = setInterval(() => {
-    const spore = document.createElement("div");
-    spore.classList.add("spore");
-    const rect = text.getBoundingClientRect();
+  function startSporeTrail(duration = 10000) {
+    text.style.transform = "translate(-45vw, -30vh)";
+    const sporeInterval = setInterval(() => {
+      const spore = document.createElement("div");
+      spore.classList.add("spore");
 
-    spore.style.left = `${rect.left + window.scrollX + text.offsetWidth / 2}px`;
-    spore.style.top = `${rect.top + window.scrollY + text.offsetHeight / 2}px`;
+      const rect = text.getBoundingClientRect();
+      spore.style.left = `${rect.left + window.scrollX + text.offsetWidth / 2}px`;
+      spore.style.top = `${rect.top + window.scrollY + text.offsetHeight / 2}px`;
 
-    document.body.appendChild(spore);
+      document.body.appendChild(spore);
+      setTimeout(() => spore.remove(), 2000);
+    }, 80);
 
     setTimeout(() => {
-      spore.remove();
-    }, 2000); // match fadeSpore timing
-  }, 150); // spore frequency
+      text.style.transform = "translate(0, 0)";
+      clearInterval(sporeInterval);
+    }, duration);
+  }
 
-  setTimeout(() => {
-    clearInterval(interval);
-  }, 10200); // run for 10.2 seconds
+  // 🔄 Timed start: run once from 5s to 15s after page loads
+  setTimeout(() => startSporeTrail(10000), 5000);
+
+  // 🖱 Hover-triggered
+  text.addEventListener("mouseenter", () => {
+    startSporeTrail(10000);
+  });
 </script>
+
 
 </div> <!-- end of site-content -->
 </body>
