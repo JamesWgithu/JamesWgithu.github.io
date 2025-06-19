@@ -73,39 +73,6 @@ body, html {
   overflow: visible;
 }
 
-.content-box::after {
-  content: '';
-  position: absolute;
-  top: -12px;
-  left: -12px;
-  right: -12px;
-  bottom: -12px;
-  border-radius: 22px;
-  background: linear-gradient(270deg, #00ffaa, #00ccff, #00ffaa);
-  background-size: 600% 600%;
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  animation: border-pulse 6s ease infinite;
-  filter: blur(10px);
-  pointer-events: none;
-}
-
-.content-box:hover::after {
-  opacity: 1;
-}
-
-@keyframes border-pulse {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 
 .content-box-Paracont {
   margin-bottom: 1.5rem;
