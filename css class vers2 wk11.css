@@ -66,13 +66,14 @@ body, html {
   background-color: #e9fff0;
   border: 2px solid #00ffcc;
   border-radius: 20px;
-  padding: 2rem;
+  padding: 2rem 2.5rem;
   margin: 6rem auto;
   max-width: 800px;
   position: relative;
   z-index: 1;
   overflow: visible;
   transition: transform 0.4s ease;
+ 
 }
 
 
@@ -686,19 +687,19 @@ footer.credits p:first-of-type {
 .content-box-wrapper-left {
   margin-left: 3rem;
   margin-right: auto;
-  max-width: 600px;
+  max-width: 800px;
 }
 
 .content-box-wrapper-right {
   margin-left: auto;
   margin-right: 3rem;
-  max-width: 600px;
+  max-width: 800px;
 }
 
 .content-box-wrapper-center {
   margin-left: auto;
   margin-right: auto;
-  max-width: 700px;
+  max-width: 850px;
 }
 
 /* Glow effect for all variants */
@@ -749,6 +750,8 @@ footer.credits p:first-of-type {
 .content-box p {
   opacity: 0.95;
   transition: opacity 0.4s ease-in-out;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .content-box-wrapper:hover p {
