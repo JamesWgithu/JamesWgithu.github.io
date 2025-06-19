@@ -110,8 +110,9 @@ body, html {
   color: #ff00aa;
 }
 
+
 .bold1 {
-  color: #27FF78;
+  color: #ff99cc;  /* Soft pink that fits your neon palette but is gentler */
   font-weight: bolder;
 }
 
