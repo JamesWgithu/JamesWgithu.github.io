@@ -1030,22 +1030,66 @@ footer.credits p:first-of-type {
   }
 }
 
-.nature-quote {
-  animation: pulseNature 4s ease-in-out infinite;
+/* 🍄 Larger mushroom */
+.big-mushroom {
+  width: 160px;
+  margin: 0 auto;
+  display: block;
+  animation: growMushroom 3s ease-in-out forwards;
 }
 
-@keyframes pulseNature {
-  0% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.01); opacity: 0.98; }
+@keyframes growMushroom {
+  0% { transform: scale(0.5); opacity: 0; }
   100% { transform: scale(1); opacity: 1; }
 }
 
-.background-root {
+/* 🌿 Roots sliding in from sides */
+.roots-left,
+.roots-right {
   position: absolute;
-  top: -50px;
-  left: -30px;
-  width: 350px;
-  opacity: 0.12;
-  z-index: 0;
-  pointer-events: none;
+  top: 50%;
+  width: 120px;
+  opacity: 0;
+  transform: translateY(-50%);
+  animation: slideInRoots 1s ease-out forwards;
+}
+
+.roots-left {
+  left: -130px;
+  animation-delay: 0.5s;
+}
+
+.roots-right {
+  right: -130px;
+  animation-delay: 0.7s;
+}
+
+@keyframes slideInRoots {
+  0% { transform: translateY(-50%) scaleX(0.2); opacity: 0; }
+  100% { transform: translateY(-50%) scaleX(1); opacity: 1; }
+}
+
+/* ✨ Text fade */
+.fadein-text {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  text-align: center;
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeIn 2.5s ease-in 1s forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Colors */
+.nature-pink {
+  color: #ff45d2;
+  font-weight: bold;
+}
+.nature-red {
+  color: #ee6250;
+  font-weight: bold;
 }
