@@ -1132,6 +1132,16 @@ footer.credits p:first-of-type {
   100% { transform: rotate(0deg) translateY(0px) scale(1); }
 }
 
+
+.big-mushroom-behind {
+  position: absolute;
+  width: 220px; /* increase size */
+  right: 5%; /* adjust as needed */
+  top: 55%; /* push it down */
+  transform: translateY(-50%);
+  z-index: 0; /* behind the textbox */
+  animation: mushroomSwaySlow 5s ease-in-out infinite;
+}
 .mushroom-sway {
   animation: mushroomSwaySlow 4.5s ease-in-out infinite;
   transform-origin: bottom center;
