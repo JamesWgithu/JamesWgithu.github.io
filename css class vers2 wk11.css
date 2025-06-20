@@ -283,7 +283,8 @@ body, html, .welcome {
   z-index: 1;
 }
 
-.main-site ::-webkit-scrollbar {
+/* WebKit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
   width: 16px;
 }
 
