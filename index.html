@@ -10,23 +10,24 @@
   <div id="site-content"></div>
 
 
-  <div class="welcome visible">
-    <div class="largetext">
-        This site requires audio.<br>Click anywhere to begin.
-    </div>
+<div class="welcome visible" id="welcomeScreen">
+  <div class="intro-text">
+    <h2>Welcome to Entangled Intelligence</h2>
+    <p>This site contains audio and visual content.<br>Click anywhere to begin.</p>
+  </div>
 </div>
-
 
   <div class="box-center intro-text">
     <p><strong>Entangled Intelligence:</strong> This project explores decentralised thought through fungi, networks, and time. Timed to a 7-minute narration, each visual shift reflects a new perspective on multispecies intelligence.</p>
   </div>
 
 
-
-  <video class="corner-video" autoplay muted loop playsinline controls>
+  <video id="mainVideo" class="corner-video" muted loop playsinline>
     <source src="CDS3001lowqualityvidcompressed 240mb.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
+
+ 
 
   <div class="stars-background">
     
@@ -409,13 +410,27 @@ New tools and perspectives may offer <span class="bold1">frontiers to exploit �
   <img src="acrossvine1.png" alt="Vine Divider">
 </div>
 
-intro html thing
-<script src="class-changes.js"></script>
-<script src="script.js"></script>
 
-
+<!-- 🔓 Welcome screen logic -->
 <script>
-  // 🟢 Cursor trail effect
+  const welcomeScreen = document.getElementById('welcomeScreen');
+  const video = document.getElementById('mainVideo'); // ✅ Defined once globally
+
+  welcomeScreen.addEventListener('click', () => {
+    welcomeScreen.classList.remove('visible');
+    welcomeScreen.style.display = "none";
+
+    if (video) {
+      video.muted = false;
+      video.play().catch((e) => {
+        console.error("Playback failed:", e);
+      });
+    }
+  });
+</script>
+
+<!-- 🔁 Cursor trail + glow logic -->
+<script>
   document.addEventListener('mousemove', e => {
     const dot = document.createElement('div');
     dot.classList.add('cursor-dot');
@@ -425,7 +440,6 @@ intro html thing
     setTimeout(() => dot.remove(), 500);
   });
 
-  // ✨ Add glow only when hovering interactive elements
   document.addEventListener('mouseover', function (e) {
     if (
       e.target.tagName === 'A' ||
@@ -447,6 +461,7 @@ intro html thing
   });
 </script>
 
+<!-- 📦 Box visibility on scroll -->
 <script>
   const observer = new IntersectionObserver(
     entries => {
@@ -456,33 +471,29 @@ intro html thing
         }
       });
     },
-    {
-      threshold: 0.1, // trigger when 10% of the box is visible
-    }
+    { threshold: 0.1 }
   );
 
-  // Target all left and right boxes
   document.querySelectorAll('.box-left, .box-right').forEach(box => {
     observer.observe(box);
   });
 </script>
 
+<!-- 🧭 Intro screen logic (if using another intro screen w/ button) -->
 <script>
-  document.getElementById("enter-button").addEventListener("click", function () {
+  document.getElementById("enter-button")?.addEventListener("click", function () {
     const intro = document.getElementById("intro-screen");
-    intro.classList.add("hidden"); // fade out via CSS class
+    intro.classList.add("hidden");
 
     setTimeout(() => {
-      intro.style.display = "none"; // fully hide after fade
-      document.getElementById("site-content").style.display = "block"; // reveal main site
-      window.scrollTo(0, 0); // scroll to top of page
-    }, 1000); // 1 second fade duration (match your CSS)
+      intro.style.display = "none";
+      document.getElementById("site-content").style.display = "block";
+      window.scrollTo(0, 0);
+    }, 1000);
   });
 </script>
 
-
-
-spores at start 
+<!-- 🍄 Spore trail logic -->
 <script>
   const text = document.getElementById("moving-text");
 
@@ -506,24 +517,19 @@ spores at start
     }, duration);
   }
 
-  // 🔄 Timed start: run once from 5s to 15s after page loads
   setTimeout(() => startSporeTrail(10000), 5000);
 
-  // 🖱 Hover-triggered
   text.addEventListener("mouseenter", () => {
     startSporeTrail(10000);
   });
 </script>
 
-
-muklticolourshrooms1
+<!-- 🍄 Mushroom grow + timed animation logic -->
 <script>
   const box = document.querySelector(".content-box.tan");
   const mushroom = document.querySelector(".mushroom-img-right");
-  const video = document.querySelector("video");
   let animationTriggered = false;
 
-  // 👉 Hover trigger
   [box, mushroom].forEach(el => {
     el.addEventListener("mouseenter", () => triggerMushroomAnimation());
     el.addEventListener("mouseleave", () => {
@@ -531,19 +537,17 @@ muklticolourshrooms1
     });
   });
 
-  // 👉 Scroll into view trigger
   const mushroomObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting && !animationTriggered) {
-      triggerMushroomAnimation();
-      animationTriggered = true;
-    }
-  });
-}, { threshold: 0.5 });
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !animationTriggered) {
+        triggerMushroomAnimation();
+        animationTriggered = true;
+      }
+    });
+  }, { threshold: 0.5 });
 
-mushroomObserver.observe(box);
+  mushroomObserver.observe(box);
 
-  // 👉 Time-based trigger (between 3:10 and 3:30)
   if (video) {
     video.addEventListener("timeupdate", () => {
       const currentTime = video.currentTime;
@@ -554,14 +558,17 @@ mushroomObserver.observe(box);
     });
   }
 
-  // 🌱 Trigger animation logic
   function triggerMushroomAnimation() {
     mushroom.classList.add("mushroom-grow", "mushroom-animate");
     setTimeout(() => {
       mushroom.classList.remove("mushroom-grow");
-    }, 2000); // Remove grow after 2 seconds
+    }, 2000);
   }
 </script>
+
+<!-- ✅ External JS files (unchanged) -->
+<script src="class-changes.js"></script>
+<script src="script.js"></script>
 
 </div> <!-- end of site-content -->
 </body>
