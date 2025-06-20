@@ -21,8 +21,7 @@
     <p><strong>Entangled Intelligence:</strong> This project explores decentralised thought through fungi, networks, and time. Timed to a 7-minute narration, each visual shift reflects a new perspective on multispecies intelligence.</p>
   </div>
 
-
-  <video id="mainVideo" class="corner-video" muted loop playsinline>
+  <video id="mainVideo" class="corner-video" muted loop playsinline controls>
     <source src="CDS3001lowqualityvidcompressed 240mb.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
@@ -413,21 +412,25 @@ New tools and perspectives may offer <span class="bold1">frontiers to exploit �
 
 <!-- 🔓 Welcome screen logic -->
 <script>
-  const welcomeScreen = document.getElementById('welcomeScreen');
-  const video = document.getElementById('mainVideo'); // ✅ Defined once globally
+const welcomeScreen = document.getElementById('welcomeScreen');
+const video = document.querySelector('.corner-video');
 
-  welcomeScreen.addEventListener('click', () => {
-    welcomeScreen.classList.remove('visible');
-    welcomeScreen.style.display = "none";
+welcomeScreen.addEventListener('click', () => {
+  welcomeScreen.classList.add('hidden'); // Triggers your CSS fade-out animation
 
-    if (video) {
-      video.muted = false;
-      video.play().catch((e) => {
-        console.error("Playback failed:", e);
-      });
-    }
-  });
+  setTimeout(() => {
+    welcomeScreen.style.display = "none"; // Fully hides it after fade
+    video.style.display = "block";        // Reveals the video
+    video.muted = false;
+    video.play().catch((e) => {
+      console.error("Playback failed:", e);
+    });
+  }, 600); // Match this to your CSS fade-out duration
+});
 </script>
+
+
+
 
 <!-- 🔁 Cursor trail + glow logic -->
 <script>
