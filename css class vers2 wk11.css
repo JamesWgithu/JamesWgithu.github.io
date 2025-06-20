@@ -1123,3 +1123,17 @@ footer.credits p:first-of-type {
   from { text-shadow: 0 0 10px #baffc9; }
   to { text-shadow: 0 0 25px #baffc9; }
 }
+
+@keyframes mushroomSwaySlow {
+  0% { transform: rotate(0deg) translateY(0px) scale(1); }
+  25% { transform: rotate(1deg) translateY(-1px) scale(1.01); }
+  50% { transform: rotate(0deg) translateY(0px) scale(1); }
+  75% { transform: rotate(-1deg) translateY(-1px) scale(1.01); }
+  100% { transform: rotate(0deg) translateY(0px) scale(1); }
+}
+
+.mushroom-sway {
+  animation: mushroomSwaySlow 4.5s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
