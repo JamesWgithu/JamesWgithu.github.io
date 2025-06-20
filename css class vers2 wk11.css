@@ -968,6 +968,22 @@ footer.credits p:first-of-type {
   animation: fadeIn 1.5s ease-out;
 }
 
+.box-heading {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+.timestamp {
+  position: absolute;
+  top: -20px;
+  right: 10px;
+  font-size: 0.8rem;
+  font-family: 'Syne Mono', monospace;
+  color: #aaa;
+  opacity: 0.6;
+}
+
 .system-stamp {
   font-family: 'Courier New', monospace;
   font-size: 0.7rem;
@@ -975,4 +991,6 @@ footer.credits p:first-of-type {
   margin: 1rem 0;
   text-align: left;
   letter-spacing: 0.05em;
+
+  
 }
