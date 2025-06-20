@@ -295,22 +295,22 @@
    <div class="text-block" style="position: relative;">
     <div class="timestamp">[04:19–04:24]</div>
 
-    <div class="quote-roots-wrapper" id="roots-trigger">
-      <p class="floating-quote-text">
-        People talk of <span class="nature-pink">escaping to nature</span>,<br>
-        as if <span class="nature-red">nature isn’t everywhere</span>.
-      </p>
+    <div id="quote-roots-trigger"></div> <!-- This triggers animation on scroll or video -->
+
+    <div class="quote-roots-wrapper">
+      <div class="floating-quote-text">People talk of escaping to nature, as if nature isn’t everywhere.</div>
     
-      <!-- Roots (with directions and optional flipping) -->
-      <img src="root5.png" class="root root-left" />
-      <img src="root6.png" class="root root-right flip-horizontal" />
-      <img src="root7.png" class="root root-top" />
-      <img src="roots1.png" class="root root-bottom flip-horizontal" />
+      <!-- Roots: mirrored and multiple -->
       <img src="root11.png" class="root root-left" />
-      <img src="root4.png" class="root root-right" />
+      <img src="root4.png" class="root root-left flip-horizontal" />
+      
+      <img src="root7.png" class="root root-right flip-horizontal" />
+      <img src="roots1.png" class="root root-right" />
+    
+      <img src="root4.png" class="root root-top" />
+      <img src="root7.png" class="root root-bottom" />
     </div>
-
-
+    
 <div class="text-block" style="position: relative;">
     <div class="timestamp">[4:25–4:41]</div>
 
@@ -902,35 +902,36 @@ welcomeScreen.addEventListener('click', () => {
 
 
 
-
 <script>
-  const rootsTrigger = document.getElementById('roots-trigger');
+  const triggerElement = document.getElementById('quote-roots-trigger');
+  const quoteRootsWrapper = document.querySelector('.quote-roots-wrapper');
 
-  
-  const activateRoots = () => {
-    // Re-add animation class to re-trigger if needed
-    rootsTrigger.classList.remove('root-animated');
-    void rootsTrigger.offsetWidth; // force reflow
-    rootsTrigger.classList.add('root-animated');
-  };
-  
-  // ✅ Scroll trigger
-  const rootsObserver = new IntersectionObserver(entries => {
+  const quoteRootsObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        activateRoots();
+        quoteRootsWrapper.querySelectorAll('.root').forEach(root => {
+          root.classList.add('animate'); // add animation class
+        });
+        quoteRootsObserver.disconnect(); // trigger once
       }
     });
-  });
-  rootsObserver.observe(rootsTrigger);
-  
-  // ✅ Video timestamp trigger (4:19–4:49)
-  video.addEventListener('timeupdate', () => {
-    if (video.currentTime >= 259 && video.currentTime <= 289) {
-      activateRoots();
-    }
-  });
-  </script>
+  }, { threshold: 0.5 });
+
+  quoteRootsObserver.observe(triggerElement);
+
+  // OPTIONAL: Also trigger based on video time (4:19 = 259s)
+  const quoteVideo = document.querySelector('video'); // renamed from 'video'
+  if (quoteVideo) {
+    quoteVideo.addEventListener('timeupdate', () => {
+      if (quoteVideo.currentTime >= 259) {
+        quoteRootsWrapper.querySelectorAll('.root').forEach(root => {
+          root.classList.add('animate');
+        });
+      }
+    });
+  }
+</script>
+
   
 <!-- ✅ External JS files (unchanged) -->
 <script src="class-changes.js"></script>
