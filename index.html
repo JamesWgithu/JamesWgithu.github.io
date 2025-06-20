@@ -295,23 +295,22 @@
    <div class="text-block" style="position: relative;">
     <div class="timestamp">[04:19–04:24]</div>
 
-    <div class="roots-trigger-wrapper" id="roots-trigger">
-      <div class="floating-quote">
-        <p>
-          People talk of <span class="nature-pink">escaping to nature</span>,<br>
-          as if <span class="nature-red">nature isn’t everywhere</span>.
-        </p>
-      </div>
+    <div class="quote-roots-wrapper" id="roots-trigger">
+      <p class="floating-quote-text">
+        People talk of <span class="nature-pink">escaping to nature</span>,<br>
+        as if <span class="nature-red">nature isn’t everywhere</span>.
+      </p>
     
-      <!-- ROOT IMAGES CRAWLING FROM ALL SIDES -->
-      <img src="root5.png" class="root-crawl root-top-left" />
-      <img src="root6.png" class="root-crawl root-top-right" />
-      <img src="root3.png" class="root-crawl root-bottom-left" />
-      <img src="root7.png" class="root-crawl root-bottom-right" />
-      <img src="root9.png" class="root-crawl root-side-left" />
-      <img src="roots2.png" class="root-crawl root-side-right" />
+      <!-- Roots (with directions and optional flipping) -->
+      <img src="root5.png" class="root root-left" />
+      <img src="root6.png" class="root root-right flip-horizontal" />
+      <img src="root7.png" class="root root-top" />
+      <img src="roots1.png" class="root root-bottom flip-horizontal" />
+      <img src="root11.png" class="root root-left" />
+      <img src="root4.png" class="root root-right" />
     </div>
- 
+
+
 <div class="text-block" style="position: relative;">
     <div class="timestamp">[4:25–4:41]</div>
 
@@ -902,29 +901,37 @@ welcomeScreen.addEventListener('click', () => {
 
 
 
+
+
 <script>
-const rootsTrigger = document.getElementById('roots-trigger');
+  const rootsTrigger = document.getElementById('roots-trigger');
 
-const activateRoots = () => {
-  rootsTrigger.classList.add('root-animated');
-};
-
-// Scroll trigger
-const rootsObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) activateRoots();
+  
+  const activateRoots = () => {
+    // Re-add animation class to re-trigger if needed
+    rootsTrigger.classList.remove('root-animated');
+    void rootsTrigger.offsetWidth; // force reflow
+    rootsTrigger.classList.add('root-animated');
+  };
+  
+  // ✅ Scroll trigger
+  const rootsObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        activateRoots();
+      }
+    });
   });
-});
-rootsObserver.observe(rootsTrigger);
-
-// Video timestamp trigger (4:19–4:49)
-video.addEventListener('timeupdate', () => {
-  if (video.currentTime >= 259 && video.currentTime <= 289) {
-    activateRoots();
-  }
-});
-</script>
-
+  rootsObserver.observe(rootsTrigger);
+  
+  // ✅ Video timestamp trigger (4:19–4:49)
+  video.addEventListener('timeupdate', () => {
+    if (video.currentTime >= 259 && video.currentTime <= 289) {
+      activateRoots();
+    }
+  });
+  </script>
+  
 <!-- ✅ External JS files (unchanged) -->
 <script src="class-changes.js"></script>
 <script src="script.js"></script>
