@@ -901,36 +901,48 @@ welcomeScreen.addEventListener('click', () => {
 
 
 
-
 <script>
   const triggerElement = document.getElementById('quote-roots-trigger');
   const quoteRootsWrapper = document.querySelector('.quote-roots-wrapper');
+  const quoteText = document.querySelector('.quote-floating-text'); // Make sure your quote has this class
+  const quoteVideo = document.querySelector('video'); // renamed to avoid const conflicts
 
+  // ✅ Function to activate root animation
+  const triggerRootAnimation = () => {
+    quoteRootsWrapper.querySelectorAll('.root').forEach(root => {
+      root.classList.add('animate');
+    });
+  };
+
+  // ✅ 1. Trigger on scroll
   const quoteRootsObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        quoteRootsWrapper.querySelectorAll('.root').forEach(root => {
-          root.classList.add('animate'); // add animation class
-        });
-        quoteRootsObserver.disconnect(); // trigger once
+        triggerRootAnimation();
+        quoteRootsObserver.disconnect(); // only once
       }
     });
   }, { threshold: 0.5 });
 
   quoteRootsObserver.observe(triggerElement);
 
-  // OPTIONAL: Also trigger based on video time (4:19 = 259s)
-  const quoteVideo = document.querySelector('video'); // renamed from 'video'
+  // ✅ 2. Trigger at 4:19 (259s) video time
   if (quoteVideo) {
     quoteVideo.addEventListener('timeupdate', () => {
       if (quoteVideo.currentTime >= 259) {
-        quoteRootsWrapper.querySelectorAll('.root').forEach(root => {
-          root.classList.add('animate');
-        });
+        triggerRootAnimation();
       }
     });
   }
+
+  // ✅ 3. Trigger on hover over the quote
+  if (quoteText) {
+    quoteText.addEventListener('mouseenter', () => {
+      triggerRootAnimation();
+    });
+  }
 </script>
+
 
   
 <!-- ✅ External JS files (unchanged) -->
