@@ -906,3 +906,10 @@ footer.credits p:first-of-type {
     transform: scale(2);
   }
 }
+
+.intro-text {
+  font-size: 1rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  line-height: 1.6;
+}
