@@ -1093,3 +1093,53 @@ footer.credits p:first-of-type {
   color: #ee6250;
   font-weight: bold;
 }
+
+.roots-trigger-wrapper {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.floating-quote {
+  z-index: 10;
+  text-align: center;
+  font-family: 'Syne Mono', monospace;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  color: white;
+  text-shadow: 0 0 10px #00ffcc;
+  padding: 1rem 2rem;
+  animation: floatIn 2s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes floatIn {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.root-crawl {
+  position: absolute;
+  width: 40%;
+  opacity: 0;
+  transform: scale(0.7);
+  transition: all 2s ease-in-out;
+  z-index: 5;
+}
+
+/* Entry animations from all directions */
+.root-animated .root-top-left     { top: -20%; left: -20%; opacity: 1; transform: scale(1.2); }
+.root-animated .root-top-right    { top: -20%; right: -20%; opacity: 1; transform: scale(1.2); }
+.root-animated .root-bottom-left  { bottom: -20%; left: -20%; opacity: 1; transform: scale(1.2); }
+.root-animated .root-bottom-right { bottom: -20%; right: -20%; opacity: 1; transform: scale(1.2); }
+.root-animated .root-side-left    { left: -10%; top: 30%; opacity: 1; transform: scale(1.2); }
+.root-animated .root-side-right   { right: -10%; bottom: 30%; opacity: 1; transform: scale(1.2); }
