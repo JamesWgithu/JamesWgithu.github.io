@@ -1137,7 +1137,7 @@ footer.credits p:first-of-type {
   position: absolute;
   width: 220px; /* increase size */
   right: 5%; /* adjust as needed */
-  top: 55%; /* push it down */
+  top: -100%; /* push it down */
   transform: translateY(-50%);
   z-index: 0; /* behind the textbox */
   animation: mushroomSwaySlow 5s ease-in-out infinite;
