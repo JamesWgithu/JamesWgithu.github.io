@@ -1135,9 +1135,9 @@ footer.credits p:first-of-type {
 
 .big-mushroom-behind {
   position: absolute;
-  width: 220px; /* increase size */
-  right: 5%; /* adjust as needed */
-  top: -100%; /* push it down */
+  width: 400px; /* increase size */
+  right: 80%; /* adjust as needed */
+  top: 0%; /* push it down */
   transform: translateY(-50%);
   z-index: 0; /* behind the textbox */
   animation: mushroomSwaySlow 5s ease-in-out infinite;
