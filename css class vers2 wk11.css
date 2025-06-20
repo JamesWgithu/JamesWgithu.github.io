@@ -117,7 +117,7 @@ body, html, .welcome {
 
 
 .bold1 {
-  color: #ff5c84;
+  color: #ff5c54;
   font-weight: bolder;
 }
 
@@ -967,34 +967,12 @@ footer.credits p:first-of-type {
 .intro-text {
   animation: fadeIn 1.5s ease-out;
 }
-/* Section headers styled like Whole Earth intro titles */
-.section-title {
+
+.system-stamp {
   font-family: 'Courier New', monospace;
-  font-size: 1.2rem;
-  color: #fffae1;
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* Highlighted words */
-.highlight {
-  color: #ffed8a;
-  font-weight: bold;
-}
-
-/* Blockquote style to break up dense text */
-blockquote {
-  border-left: 3px solid #999;
+  font-size: 0.7rem;
+  opacity: 0.4;
   margin: 1rem 0;
-  padding-left: 1rem;
-  font-style: italic;
-  color: #ccc;
-  font-size: 0.95rem;
-}
-
-/* Paragraph spacing */
-.content-box p {
-  margin-bottom: 1rem;
-  line-height: 1.75;
+  text-align: left;
+  letter-spacing: 0.05em;
 }
