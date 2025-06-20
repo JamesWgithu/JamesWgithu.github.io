@@ -1001,6 +1001,7 @@ footer.credits p:first-of-type {
   max-width: 70%;
   margin: 0 auto;
   position: relative;
+  height: 70%;
 }
 
 .highlight-word {
