@@ -975,13 +975,12 @@ footer.credits p:first-of-type {
 }
 
 .timestamp {
-  position: absolute;
-  top: -20px;
-  right: 10px;
-  font-size: 0.8rem;
-  font-family: 'Syne Mono', monospace;
-  color: #aaa;
-  opacity: 0.6;
+  position: relative;
+  margin-bottom: -12px;
+  margin-left: 12px;
+  font-size: 0.9rem;
+  color: #bbb;
+  font-family: monospace;
 }
 
 .system-stamp {

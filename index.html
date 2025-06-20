@@ -49,7 +49,7 @@
     </section>
 
     <div class="text-block" style="position: relative;">
-      <div class="timestamp">[0:00–0:252]</div>
+      <div class="timestamp">[0:00–0:02]</div>
 
     <h2 id="moving-text"class="subtitle">It’s lonely at the top, but it doesn’t have to be...</h2>
 
@@ -61,7 +61,7 @@
     <div style="height: 200px;"></div>
    
     <div class="text-block" style="position: relative;">
-      <div class="timestamp">[0:3.14 – 0:15.90]</div>
+      <div class="timestamp">[0:03 – 0:15]</div>
     
 
       <div class="content-box-wrapper-left content-box-wrapper-glow">
@@ -95,6 +95,7 @@
 </div>
 
 <div class="text-block" style="position: relative;">
+  <span class="timestamp jump-time" data-time="23">[0:23]</span>
   <div class="timestamp">[0:23–0:45]</div>
 
 <div class="content-box-wrapper-left content-box-wrapper-glow">
@@ -486,86 +487,48 @@ New tools and perspectives might open <span class="bold1">frontiers to exploit �
 
 
 
-                ORIGINAL ONE BELOWWWWWW
 
 
-<div style="height: 200px;"></div>
 
 <div style="height: 200px;"></div>
 
-<div class="publication-wrapper">
-  <p class="publication-note">CREDITS: </p>
-</div>
-
 <div style="height: 200px;"></div>
 
-<section>
-  <div class="green-line"></div>
-</section>
-
-
-<div class="publication-wrapper">
-  <p class="publication-note">Webdesign by James Worsfold </p>
-</div>
-
-<div class="footer-vine-reflected">
-  <img src="acrossvine1.png" alt="Vine Divider" />
-</div>
-
-<div style="height: 200px;"></div>
-
-<div class="footer-graphic">
-  <img src="treelich123.svg" alt="Credits Background Graphic" />
-</div>
-
-<footer class="credits">
-  <p>Site by [James Worsfold] · Design for Future Communications CDS3001 · Monash University 2025</p>
-</footer>
 
 
 <footer class="credits">
-  <p>Many thanks to the constant guidance and assistance from Uriah Gray</p> 
-</footer>
+  <div class="footer-vine">
+    <img src="acrossvine1.png" alt="Vine Divider">
+  </div>
 
+  <p><strong>Site by James Worsfold</strong> · Design for Future Communications (CDS3001)<br>
+  Monash University · Semester 1, 2025</p>
 
-<footer class="credits">
- <p>Publication by Doug Bierend – August 08, 2022</p> 
-  <p>Original Publication https://reallifemag.com/entangled-intelligence/
-    By Doug Bierend August 08, 2022
+  <p>Special thanks to <strong>Uriah Gray</strong> for constant guidance and support throughout this project.</p>
 
-<Br>Doug Bierend is a freelance writer, and author of In Search of Mycotopia. 
-  
-  He is interested in science, media, technology, ecology, degrowth, food systems, 
-  
-  and general subversiveness in service of a more equitable and sustainable world. 
-   
-  You can follow him on Twitter or on Instagram.</Br>
-   <br>https://dougbierend.com/ </br>
-  </p>
-</footer>
+  <p><strong>Original publication:</strong> <em>“Entangled Intelligence”</em> by Doug Bierend · August 08, 2022<br>
+  <a href="https://reallifemag.com/entangled-intelligence/" target="_blank">Read on Real Life Magazine</a></p>
 
-<footer class="credits">
-  <p>Real Life was a magazine about living with technology. The emphasis was more on living.
+  <p>Doug Bierend is a freelance writer and author of <em>In Search of Mycotopia</em>, exploring science, ecology, degrowth, and sustainability.<br>
+  <a href="https://dougbierend.com/" target="_blank">dougbierend.com</a></p>
 
-    To find out more about us, click here. To find out more about our contributors, click here.
-    
-    Real Life was made possible by funding from Snap, Inc., and we operated with editorial independence and without ads.</p>
-</footer>
-
-
-<footer class="credits">
-  <p><strong>Site by James Worsfold</strong> · Design for Future Communications CDS3001 · Monash University 2025</p>
-  <p>Many thanks to the constant guidance and assistance from Uriah Gray.</p>  <p><strong>Original</strong>
-  <p><strong>Publication by Doug Bierend – August 08, 2022</strong><br>
-    <a href="https://reallifemag.com/entangled-intelligence/" target="_blank">Original article on Real Life</a><br>
-    Doug Bierend is a freelance writer and author of <em>In Search of Mycotopia</em>. He explores science, ecology, and sustainable futures.<br>
-    <a href="https://dougbierend.com/" target="_blank">dougbierend.com</a>
-  </p>
   <p><strong>About Real Life Magazine:</strong><br>
-    Real Life was a magazine about living with technology. The emphasis was more on <em>living</em>.<br>
-    It was supported by Snap, Inc. and maintained editorial independence.
-  </p>
+  Real Life was a publication about technology and lived experience. It was funded by Snap, Inc. and operated with editorial independence.</p>
+
+  <div class="footer-graphic">
+    <img src="treelich123.svg" alt="Credits Background Graphic" />
+  </div>
 </footer>
+
+
+
+
+
+
+
+
+
+
 
 <div class="footer-vine">
   <img src="acrossvine1.png" alt="Vine Divider">
@@ -731,7 +694,18 @@ welcomeScreen.addEventListener('click', () => {
   }
 </script>
 
-
+<script>
+  document.querySelectorAll('.jump-time').forEach(el => {
+    el.style.cursor = 'pointer';
+    el.addEventListener('click', () => {
+      const seconds = parseInt(el.getAttribute('data-time'), 10);
+      if (video) {
+        video.currentTime = seconds;
+        video.play();
+      }
+    });
+  });
+</script>
 
 <script>
   const triggerElement = document.getElementById('quote-roots-trigger');
