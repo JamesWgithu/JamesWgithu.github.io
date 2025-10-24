@@ -529,3 +529,15 @@ body{ background-size: 115% auto; }  /* try 110–130% */
     height: auto;
     pointer-events: none;
   }
+
+  /* Bigger gap after every case */
+.casestudy { margin-bottom: 280px; }      /* add space after the whole case */
+
+/* Extra air *only* before the next case (stacked cases) */
+.casestudy + .casestudy { margin-top: 420px; }
+
+/* If you’re using the full-screen break section */
+.break-full { margin-top: clamp(140px, 12vh, 260px); }
+
+/* If the last figure in a case feels tight, bump its bottom margin */
+.width75 figure { margin-bottom: 60px; }
